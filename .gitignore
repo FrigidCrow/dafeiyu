@@ -1,0 +1,39 @@
+# Local operating-system files and editor state
+.DS_Store
+._*
+.idea/
+.vscode/
+
+# Credentials and local application data
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+/data/
+/backups/
+/logs/
+
+# Dependencies and caches
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.cache/
+*.log
+
+# Downloaded third-party research tools, runtimes and release packages
+/research/tools/
+/research/artifacts/
+
+# Raw REA outputs stay local; retain authored findings in version control
+/research/rea/*
+!/research/rea/*.md

@@ -1,0 +1,31 @@
+{
+  "views": [
+    {
+      "view": "product",
+      "checkedNodes": 17,
+      "textOverflows": []
+    },
+    {
+      "view": "runtime",
+      "checkedNodes": 20,
+      "textOverflows": []
+    },
+    {
+      "view": "flows",
+      "checkedNodes": 18,
+      "textOverflows": []
+    },
+    {
+      "view": "deployment",
+      "checkedNodes": 14,
+      "textOverflows": []
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "mobile": {
+    "viewport": 390,
+    "documentWidth": 390
+  },
+  "passed": true
+}
