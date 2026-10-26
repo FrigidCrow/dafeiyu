@@ -1,0 +1,863 @@
+{
+  "recordedAt": "2026-10-26T12:33:06.183Z",
+  "staleCommit": {
+    "at": "2026-10-26T12:33:05.919Z",
+    "kind": "stale-job-commit",
+    "detail": {
+      "capturedVersion": 1,
+      "currentVersion": 2,
+      "refused": true,
+      "explanation": "模拟整理任务先读旧版本、暂停、人工遗忘，再恢复提交；提交阶段拒绝。未运行线程级并发。"
+    }
+  },
+  "actualWriteRefusal": {
+    "at": "2026-10-26T12:33:05.910Z",
+    "kind": "memory-write-refused",
+    "detail": {
+      "capturedVersion": 1,
+      "currentVersion": 2
+    }
+  },
+  "finalState": {
+    "fish": {
+      "id": "PROTOTYPE-FISH-ONE",
+      "name": "大肥鱼 · 虚构样本",
+      "persona": "温和直接的陪伴伙伴。用简短中文交流，不强制追问。",
+      "revision": 1
+    },
+    "revision": 3,
+    "memory": {
+      "id": "sample-preference",
+      "value": "",
+      "status": "forgotten",
+      "version": 2,
+      "locked": true,
+      "sourceIds": [
+        "prototype-c41fcc88-ae51-4955-8aaa-441b14b65624:5"
+      ]
+    },
+    "budget": {
+      "limit": 3000,
+      "used": 400,
+      "reserved": 0,
+      "chatReserve": 300,
+      "entries": [
+        {
+          "id": "20d89606-66e0-4106-a5be-a3d25633e12a",
+          "purpose": "chat",
+          "reserved": 0,
+          "status": "settled",
+          "usage": {
+            "inputTokens": 80,
+            "outputTokens": 20,
+            "totalTokens": 100
+          },
+          "actual": 100
+        },
+        {
+          "id": "c9d0166f-74fa-42c4-9d9c-37c57d184e7f",
+          "purpose": "chat",
+          "reserved": 0,
+          "status": "settled",
+          "usage": {
+            "inputTokens": 80,
+            "outputTokens": 20,
+            "totalTokens": 100
+          },
+          "actual": 100
+        },
+        {
+          "id": "0f0d5a5e-660e-42b4-9abb-8aeb495e372d",
+          "purpose": "recall",
+          "reserved": 0,
+          "status": "settled",
+          "usage": {
+            "inputTokens": 80,
+            "outputTokens": 20,
+            "totalTokens": 100
+          },
+          "actual": 100
+        },
+        {
+          "id": "54bbc6ae-4930-4f54-88cb-d5d729fb52ee",
+          "purpose": "recall",
+          "reserved": 0,
+          "status": "settled",
+          "usage": {
+            "inputTokens": 80,
+            "outputTokens": 20,
+            "totalTokens": 100
+          },
+          "actual": 100
+        }
+      ],
+      "remaining": 2600
+    },
+    "sessionId": "prototype-b4b42aac-82a2-4445-8b51-dc8f0084094b",
+    "sessionEpoch": 1,
+    "appliedEpoch": 1,
+    "archive": [
+      {
+        "id": "prototype-c41fcc88-ae51-4955-8aaa-441b14b65624:5",
+        "kind": "dsh-source",
+        "sessionId": "prototype-c41fcc88-ae51-4955-8aaa-441b14b65624",
+        "seq": 5,
+        "value": "虚构样本：喜欢茉莉花茶"
+      }
+    ],
+    "revokedSources": [
+      "prototype-c41fcc88-ae51-4955-8aaa-441b14b65624:5"
+    ],
+    "requests": [
+      {
+        "id": "20d89606-66e0-4106-a5be-a3d25633e12a",
+        "at": "2026-10-26T12:33:05.774Z",
+        "purpose": "chat",
+        "fishId": "PROTOTYPE-FISH-ONE",
+        "revision": 1,
+        "sessionEpoch": 0,
+        "memoryVersion": 0,
+        "nativeLoop": true,
+        "reachedProvider": true,
+        "request": {
+          "provider": "prototype",
+          "model": "scripted-fixture",
+          "maxTokens": 256,
+          "messages": [
+            {
+              "role": "system",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "这是一次性原型的虚构相处。核心人格不得自动修改。\n{\"fish_id\":\"PROTOTYPE-FISH-ONE\",\"persona\":\"温和直接的陪伴伙伴。用简短中文交流，不强制追问。\",\"persona_revision\":1,\"state_revision\":1,\"memory_version\":0,\"allowed_memory\":null,\"memory_status\":\"empty\"}\n需要回看来源时只能调用 recall_allowed_source。记住明确事实时调用 remember_sample；人工纠正与遗忘优先。"
+                }
+              ],
+              "source": {
+                "kind": "system-prompt"
+              },
+              "id": "5d65bb2b-ecd5-4984-9836-8c4bf9f0c29b"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "记住样本：虚构样本：喜欢茉莉花茶"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "9c61bef4-956f-4117-a70e-1adcd6960c49"
+            }
+          ],
+          "toolHistory": {
+            "tools": [
+              {
+                "name": "recall_allowed_source",
+                "description": "按当前撤销、版本与人工锁检查旧来源。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              {
+                "name": "remember_sample",
+                "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value"
+                  ]
+                }
+              }
+            ],
+            "updates": []
+          },
+          "tools": [
+            {
+              "name": "recall_allowed_source",
+              "description": "按当前撤销、版本与人工锁检查旧来源。",
+              "parameters": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            {
+              "name": "remember_sample",
+              "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "sessionId": "prototype-c41fcc88-ae51-4955-8aaa-441b14b65624"
+        }
+      },
+      {
+        "id": "c9d0166f-74fa-42c4-9d9c-37c57d184e7f",
+        "at": "2026-10-26T12:33:05.814Z",
+        "purpose": "chat",
+        "fishId": "PROTOTYPE-FISH-ONE",
+        "revision": 2,
+        "sessionEpoch": 0,
+        "memoryVersion": 1,
+        "nativeLoop": true,
+        "reachedProvider": true,
+        "request": {
+          "provider": "prototype",
+          "model": "scripted-fixture",
+          "maxTokens": 256,
+          "messages": [
+            {
+              "role": "system",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "这是一次性原型的虚构相处。核心人格不得自动修改。\n{\"fish_id\":\"PROTOTYPE-FISH-ONE\",\"persona\":\"温和直接的陪伴伙伴。用简短中文交流，不强制追问。\",\"persona_revision\":1,\"state_revision\":2,\"memory_version\":1,\"allowed_memory\":\"虚构样本：喜欢茉莉花茶\",\"memory_status\":\"active\"}\n需要回看来源时只能调用 recall_allowed_source。记住明确事实时调用 remember_sample；人工纠正与遗忘优先。"
+                }
+              ],
+              "source": {
+                "kind": "system-prompt"
+              },
+              "id": "5c70c776-14f6-41f2-aaf6-47642507656c"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "记住样本：虚构样本：喜欢茉莉花茶"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "9c61bef4-956f-4117-a70e-1adcd6960c49"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "tool-call",
+                  "id": "d958fae3-6e74-4143-b522-5bb94eca255c",
+                  "name": "remember_sample",
+                  "arguments": "{\"value\":\"虚构样本：喜欢茉莉花茶\"}"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "33507099-99cd-4462-9e8d-01192c73ea0e"
+            },
+            {
+              "role": "tool",
+              "source": {
+                "kind": "tool",
+                "callId": "d958fae3-6e74-4143-b522-5bb94eca255c"
+              },
+              "toolCallId": "d958fae3-6e74-4143-b522-5bb94eca255c",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "已形成样本记忆，来源为实际 DSH user/message。"
+                }
+              ],
+              "isError": false,
+              "id": "149f5bb0-6105-4797-be6f-4044a9e13788"
+            }
+          ],
+          "toolHistory": {
+            "tools": [
+              {
+                "name": "recall_allowed_source",
+                "description": "按当前撤销、版本与人工锁检查旧来源。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              {
+                "name": "remember_sample",
+                "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value"
+                  ]
+                }
+              }
+            ],
+            "updates": []
+          },
+          "tools": [
+            {
+              "name": "recall_allowed_source",
+              "description": "按当前撤销、版本与人工锁检查旧来源。",
+              "parameters": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            {
+              "name": "remember_sample",
+              "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "sessionId": "prototype-c41fcc88-ae51-4955-8aaa-441b14b65624"
+        }
+      },
+      {
+        "id": "0f0d5a5e-660e-42b4-9abb-8aeb495e372d",
+        "at": "2026-10-26T12:33:06.101Z",
+        "purpose": "recall",
+        "fishId": "PROTOTYPE-FISH-ONE",
+        "revision": 3,
+        "sessionEpoch": 1,
+        "memoryVersion": 2,
+        "nativeLoop": true,
+        "reachedProvider": true,
+        "request": {
+          "provider": "prototype",
+          "model": "scripted-fixture",
+          "maxTokens": 256,
+          "messages": [
+            {
+              "role": "system",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "这是一次性原型的虚构相处。核心人格不得自动修改。\n{\"fish_id\":\"PROTOTYPE-FISH-ONE\",\"persona\":\"温和直接的陪伴伙伴。用简短中文交流，不强制追问。\",\"persona_revision\":1,\"state_revision\":3,\"memory_version\":2,\"allowed_memory\":null,\"memory_status\":\"forgotten\"}\n需要回看来源时只能调用 recall_allowed_source。记住明确事实时调用 remember_sample；人工纠正与遗忘优先。"
+                }
+              ],
+              "source": {
+                "kind": "system-prompt"
+              },
+              "id": "ae88ad11-e0e6-462f-a2f2-85b528296a4a"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "读取旧来源，告诉我现在允许使用什么。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "367e9b80-ab17-4ff6-80dc-4df68cc16ba0"
+            }
+          ],
+          "toolHistory": {
+            "tools": [
+              {
+                "name": "recall_allowed_source",
+                "description": "按当前撤销、版本与人工锁检查旧来源。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              {
+                "name": "remember_sample",
+                "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value"
+                  ]
+                }
+              }
+            ],
+            "updates": []
+          },
+          "tools": [
+            {
+              "name": "recall_allowed_source",
+              "description": "按当前撤销、版本与人工锁检查旧来源。",
+              "parameters": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            {
+              "name": "remember_sample",
+              "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "sessionId": "prototype-b4b42aac-82a2-4445-8b51-dc8f0084094b"
+        }
+      },
+      {
+        "id": "54bbc6ae-4930-4f54-88cb-d5d729fb52ee",
+        "at": "2026-10-26T12:33:06.138Z",
+        "purpose": "recall",
+        "fishId": "PROTOTYPE-FISH-ONE",
+        "revision": 3,
+        "sessionEpoch": 1,
+        "memoryVersion": 2,
+        "nativeLoop": true,
+        "reachedProvider": true,
+        "request": {
+          "provider": "prototype",
+          "model": "scripted-fixture",
+          "maxTokens": 256,
+          "messages": [
+            {
+              "role": "system",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "这是一次性原型的虚构相处。核心人格不得自动修改。\n{\"fish_id\":\"PROTOTYPE-FISH-ONE\",\"persona\":\"温和直接的陪伴伙伴。用简短中文交流，不强制追问。\",\"persona_revision\":1,\"state_revision\":3,\"memory_version\":2,\"allowed_memory\":null,\"memory_status\":\"forgotten\"}\n需要回看来源时只能调用 recall_allowed_source。记住明确事实时调用 remember_sample；人工纠正与遗忘优先。"
+                }
+              ],
+              "source": {
+                "kind": "system-prompt"
+              },
+              "id": "ae88ad11-e0e6-462f-a2f2-85b528296a4a"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "读取旧来源，告诉我现在允许使用什么。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "367e9b80-ab17-4ff6-80dc-4df68cc16ba0"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "tool-call",
+                  "id": "0c2a2244-a508-41cc-84fc-ede96cc82ce1",
+                  "name": "recall_allowed_source",
+                  "arguments": "{}"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "cfb5c9df-81ff-4785-a13c-25e3ddea7340"
+            },
+            {
+              "role": "tool",
+              "source": {
+                "kind": "tool",
+                "callId": "0c2a2244-a508-41cc-84fc-ede96cc82ce1"
+              },
+              "toolCallId": "0c2a2244-a508-41cc-84fc-ede96cc82ce1",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{\"allowed\":false,\"reason\":\"来源已撤销或没有允许使用的记忆；原文仅供使用者回看。\",\"value\":null}"
+                }
+              ],
+              "isError": false,
+              "id": "fe248fd6-206a-4065-8342-913135107b8b"
+            }
+          ],
+          "toolHistory": {
+            "tools": [
+              {
+                "name": "recall_allowed_source",
+                "description": "按当前撤销、版本与人工锁检查旧来源。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              {
+                "name": "remember_sample",
+                "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value"
+                  ]
+                }
+              }
+            ],
+            "updates": []
+          },
+          "tools": [
+            {
+              "name": "recall_allowed_source",
+              "description": "按当前撤销、版本与人工锁检查旧来源。",
+              "parameters": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            {
+              "name": "remember_sample",
+              "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "sessionId": "prototype-b4b42aac-82a2-4445-8b51-dc8f0084094b"
+        }
+      }
+    ],
+    "audit": [
+      {
+        "at": "2026-10-26T12:33:05.765Z",
+        "kind": "reset",
+        "detail": "重置虚构样本与模拟账本；旧 DSH 日志仍保存在 scratch 中。"
+      },
+      {
+        "at": "2026-10-26T12:33:05.805Z",
+        "kind": "memory-formed-by-dsh-tool",
+        "detail": {
+          "sourceId": "prototype-c41fcc88-ae51-4955-8aaa-441b14b65624:5",
+          "version": 1
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.847Z",
+        "kind": "turn-completed",
+        "detail": {
+          "purpose": "chat",
+          "sessionId": "prototype-c41fcc88-ae51-4955-8aaa-441b14b65624",
+          "answer": "模拟模型收到的工具结果：已形成样本记忆，来源为实际 DSH user/message。",
+          "end": {
+            "turn": 1,
+            "reason": {
+              "kind": "completed"
+            }
+          },
+          "events": [
+            "agent/inbox/spliced",
+            "turn/start",
+            "agent/inbox/spliced",
+            "step/start",
+            "system/message",
+            "user/message",
+            "request/header",
+            "request/context",
+            "assistant/message",
+            "tool/call",
+            "tool/result",
+            "step/end",
+            "step/start",
+            "system/message",
+            "request/header",
+            "assistant/message",
+            "step/end",
+            "turn/end"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.866Z",
+        "kind": "forget",
+        "detail": {
+          "memoryVersion": 2,
+          "revokedSourceCount": 1
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.900Z",
+        "kind": "forget",
+        "detail": "已遗忘；同一条鱼进入干净的 DSH 会话，撤销旧来源，档案仍可回看。"
+      },
+      {
+        "at": "2026-10-26T12:33:05.910Z",
+        "kind": "memory-write-refused",
+        "detail": {
+          "capturedVersion": 1,
+          "currentVersion": 2
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.919Z",
+        "kind": "stale-job-commit",
+        "detail": {
+          "capturedVersion": 1,
+          "currentVersion": 2,
+          "refused": true,
+          "explanation": "模拟整理任务先读旧版本、暂停、人工遗忘，再恢复提交；提交阶段拒绝。未运行线程级并发。"
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:06.087Z",
+        "kind": "host-started",
+        "detail": {
+          "pid": 39952,
+          "bootId": "b2dc0121-b3d2-496d-97fb-0ad1b531e984",
+          "resumedSession": "prototype-b4b42aac-82a2-4445-8b51-dc8f0084094b"
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:06.128Z",
+        "kind": "governed-recall",
+        "detail": {
+          "allowed": false,
+          "reason": "来源已撤销或没有允许使用的记忆；原文仅供使用者回看。",
+          "value": null
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:06.168Z",
+        "kind": "turn-completed",
+        "detail": {
+          "purpose": "recall",
+          "sessionId": "prototype-b4b42aac-82a2-4445-8b51-dc8f0084094b",
+          "answer": "模拟模型收到的工具结果：{\"allowed\":false,\"reason\":\"来源已撤销或没有允许使用的记忆；原文仅供使用者回看。\",\"value\":null}",
+          "end": {
+            "turn": 1,
+            "reason": {
+              "kind": "completed"
+            }
+          },
+          "events": [
+            "agent/inbox/spliced",
+            "turn/start",
+            "agent/inbox/spliced",
+            "step/start",
+            "system/message",
+            "user/message",
+            "request/header",
+            "request/context",
+            "assistant/message",
+            "tool/call",
+            "tool/result",
+            "step/end",
+            "step/start",
+            "assistant/message",
+            "step/end",
+            "turn/end"
+          ]
+        }
+      }
+    ],
+    "lastResult": "模拟模型收到的工具结果：{\"allowed\":false,\"reason\":\"来源已撤销或没有允许使用的记忆；原文仅供使用者回看。\",\"value\":null}",
+    "mode": "mock",
+    "runtime": {
+      "pid": 39952,
+      "bootId": "b2dc0121-b3d2-496d-97fb-0ad1b531e984",
+      "dshVersion": "0.2.1-rc.3 (npm release)",
+      "cordisVersion": "4.0.5",
+      "scratchRoot": "/Users/frigidcrow/.codex/worktrees/prototype-dsh-companion/dafeiyu/prototype-dsh-companion/PROTOTYPE_SCRATCH_budget_wipe_me",
+      "provider": "本地确定性模拟，无网络请求",
+      "contextWindow": 8192,
+      "providerBalance": null,
+      "sessionEvents": [
+        {
+          "seq": 0,
+          "type": "session/end-seed"
+        },
+        {
+          "seq": 1,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 2,
+          "type": "turn/start"
+        },
+        {
+          "seq": 3,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 4,
+          "type": "step/start"
+        },
+        {
+          "seq": 5,
+          "type": "system/message"
+        },
+        {
+          "seq": 6,
+          "type": "user/message"
+        },
+        {
+          "seq": 7,
+          "type": "request/header"
+        },
+        {
+          "seq": 8,
+          "type": "request/context"
+        },
+        {
+          "seq": 9,
+          "type": "assistant/message"
+        },
+        {
+          "seq": 10,
+          "type": "tool/call"
+        },
+        {
+          "seq": 11,
+          "type": "tool/result"
+        },
+        {
+          "seq": 12,
+          "type": "step/end"
+        },
+        {
+          "seq": 13,
+          "type": "step/start"
+        },
+        {
+          "seq": 14,
+          "type": "assistant/message"
+        },
+        {
+          "seq": 15,
+          "type": "step/end"
+        },
+        {
+          "seq": 16,
+          "type": "turn/end"
+        }
+      ],
+      "surface": [
+        {
+          "role": "system",
+          "content": [
+            {
+              "type": "text",
+              "text": "这是一次性原型的虚构相处。核心人格不得自动修改。\n{\"fish_id\":\"PROTOTYPE-FISH-ONE\",\"persona\":\"温和直接的陪伴伙伴。用简短中文交流，不强制追问。\",\"persona_revision\":1,\"state_revision\":3,\"memory_version\":2,\"allowed_memory\":null,\"memory_status\":\"forgotten\"}\n需要回看来源时只能调用 recall_allowed_source。记住明确事实时调用 remember_sample；人工纠正与遗忘优先。"
+            }
+          ],
+          "source": {
+            "kind": "system-prompt"
+          },
+          "id": "ae88ad11-e0e6-462f-a2f2-85b528296a4a"
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "读取旧来源，告诉我现在允许使用什么。"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          },
+          "role": "user",
+          "id": "367e9b80-ab17-4ff6-80dc-4df68cc16ba0"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "tool-call",
+              "id": "0c2a2244-a508-41cc-84fc-ede96cc82ce1",
+              "name": "recall_allowed_source",
+              "arguments": "{}"
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "prototype",
+            "model": "scripted-fixture"
+          },
+          "id": "cfb5c9df-81ff-4785-a13c-25e3ddea7340"
+        },
+        {
+          "role": "tool",
+          "source": {
+            "kind": "tool",
+            "callId": "0c2a2244-a508-41cc-84fc-ede96cc82ce1"
+          },
+          "toolCallId": "0c2a2244-a508-41cc-84fc-ede96cc82ce1",
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"allowed\":false,\"reason\":\"来源已撤销或没有允许使用的记忆；原文仅供使用者回看。\",\"value\":null}"
+            }
+          ],
+          "isError": false,
+          "id": "fe248fd6-206a-4065-8342-913135107b8b"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "模拟模型收到的工具结果：{\"allowed\":false,\"reason\":\"来源已撤销或没有允许使用的记忆；原文仅供使用者回看。\",\"value\":null}"
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "prototype",
+            "model": "scripted-fixture"
+          },
+          "id": "022cf5c4-4d80-4dc9-b282-95baf9f4c31c"
+        }
+      ]
+    }
+  },
+  "note": "受控异步交错通过实际提交函数；无真实后台模型整理或线程级并发"
+}

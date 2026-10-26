@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>大肥鱼 · DSH 状态原型</title>
+  <style>
+    :root { color-scheme: light; --ink:#1e302e; --muted:#62706c; --line:#dbe2dd; --paper:#fff; --bg:#f4f6f2; --accent:#226957; --soft:#e8f1ec; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+    main { width:min(1160px,calc(100% - 40px)); margin:36px auto 64px; }
+    h1,h2,h3,p { margin:0; } h1 { font-size:29px; letter-spacing:-.5px; line-height:1.35; } h2 { font-size:19px; margin-bottom:14px; } h3 { font-size:15px; margin-bottom:9px; }
+    header { margin-bottom:24px; } .eyebrow { color:var(--accent); font-size:12px; font-weight:700; letter-spacing:1.6px; margin-bottom:8px; }
+    .question { max-width:850px; margin-top:12px; font-size:17px; } .muted,small { color:var(--muted); } .sub { margin-top:8px; }
+    .mode { margin-top:18px; border:1px solid var(--line); border-left:4px solid var(--accent); padding:12px 15px; background:var(--paper); }
+    .mode strong { display:block; } .mode p { font-size:13px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    section,.card { background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:22px; }
+    section { margin-top:18px; } .grid section { margin-top:0; }
+    .section-head { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:15px; } .section-head h2 { margin:0; }
+    .pill { display:inline-block; border:1px solid var(--line); border-radius:20px; padding:3px 10px; font-size:12px; white-space:nowrap; background:var(--soft); }
+    dl { display:grid; grid-template-columns:110px minmax(0,1fr); gap:8px 14px; margin:0; } dt { color:var(--muted); } dd { margin:0; overflow-wrap:anywhere; }
+    .value { font-size:21px; font-weight:650; margin:6px 0 14px; min-height:34px; overflow-wrap:anywhere; }
+    .mini { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-bottom:15px; }
+    .mini div { background:var(--bg); border-radius:6px; padding:11px; } .mini strong { display:block; font-size:22px; } .mini span { font-size:12px; color:var(--muted); }
+    .budget-note { font-size:13px; border-top:1px solid var(--line); padding-top:12px; }
+    label { display:block; font-size:13px; font-weight:600; margin-bottom:5px; }
+    input,textarea { font:inherit; width:100%; border:1px solid #bac8c0; border-radius:5px; background:#fff; color:var(--ink); padding:9px 11px; }
+    textarea { resize:vertical; min-height:76px; } input:focus,textarea:focus,button:focus-visible { outline:3px solid #a9cbbd; outline-offset:2px; }
+    button { cursor:pointer; border:1px solid #b8c9c0; border-radius:5px; color:var(--ink); background:#fff; padding:8px 13px; font:inherit; line-height:1.5; }
+    button:hover { background:var(--soft); border-color:var(--accent); } button.primary { background:var(--accent); color:white; border-color:var(--accent); }
+    button:disabled { cursor:wait; opacity:.5; } .buttons { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .actions { display:grid; grid-template-columns:1fr 1fr; gap:24px; } .action-group { min-width:0; }
+    .fields { display:grid; grid-template-columns:1fr 1fr; gap:10px; } .explain { font-size:13px; color:var(--muted); margin-top:8px; }
+    .tabs { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; } .tabs button[aria-selected="true"] { background:var(--soft); border-color:var(--accent); font-weight:600; }
+    .walkthrough { border-top:1px solid var(--line); padding-top:16px; } .steps { list-style:none; padding:0; margin:18px 0 0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:9px; }
+    .steps button { width:100%; text-align:left; height:100%; font-size:13px; } .steps button.next { border-color:var(--accent); box-shadow:inset 3px 0 var(--accent); } .steps button.done { color:var(--muted); background:var(--bg); }
+    .step-number { display:block; font-size:11px; color:var(--muted); margin-bottom:3px; }
+    #operation { min-height:24px; margin-top:12px; color:var(--accent); font-weight:600; } #operation.error { color:#9c332c; }
+    .result { white-space:pre-wrap; overflow-wrap:anywhere; background:var(--bg); border-radius:5px; padding:14px; font-size:14px; max-height:320px; overflow:auto; }
+    details { margin-top:12px; } summary { cursor:pointer; color:var(--accent); overflow-wrap:anywhere; } pre { white-space:pre-wrap; overflow-wrap:anywhere; background:#f5f6f3; padding:14px; border-radius:5px; font-size:12px; line-height:1.55; max-height:440px; overflow:auto; }
+    .entries { max-height:340px; overflow:auto; } .entry { padding:10px 0; border-top:1px solid var(--line); font-size:13px; overflow-wrap:anywhere; white-space:pre-wrap; } .entry:first-child { border-top:0; }
+    .empty { color:var(--muted); font-size:13px; padding:8px 0; } .requests { display:grid; gap:8px; } .requests details { margin:0; border-top:1px solid var(--line); padding-top:10px; }
+    footer { color:var(--muted); font-size:12px; margin-top:18px; } .inline-code { font-family:ui-monospace,SFMono-Regular,monospace; font-size:12px; }
+    @media(max-width:760px) { main { width:calc(100% - 24px); margin-top:22px; } h1 { font-size:25px; } .grid,.actions { grid-template-columns:1fr; } section,.card { padding:18px; } .steps { grid-template-columns:1fr 1fr; } dl { grid-template-columns:92px minmax(0,1fr); } .section-head { align-items:flex-start; } }
+    @media(max-width:420px) { .steps { grid-template-columns:1fr; } .mini { gap:5px; } .mini div { padding:8px; } .mini strong { font-size:20px; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">DAFEIYU / PROTOTYPE 01</div>
+    <h1>同一条鱼，状态是否一致？</h1>
+    <p class="question">管理页对人格、记忆与预算的修改，是否真正控制 DSH 运行，并在人工纠正、遗忘、压缩与重启后保持一致？</p>
+    <p class="muted sub">一次性逻辑原型 · 全部使用虚构样本 · 本轮范围：宿主接入、可控记忆、简易管理页</p>
+    <div class="mode" role="status"><strong id="mode-title">正在读取运行状态…</strong><p id="mode-detail">请求与状态记录用于核对接入，不能只凭一句回复判定遗忘成功。</p></div>
+  </header>
+
+  <div class="grid">
+    <section aria-labelledby="fish-heading">
+      <div class="section-head"><h2 id="fish-heading">当前这条鱼</h2><span id="state-revision" class="pill">状态 —</span></div>
+      <div id="fish-name" class="value">—</div>
+      <dl><dt>角色身份</dt><dd id="fish-id">—</dd><dt>核心人格</dt><dd id="fish-persona">—</dd><dt>当前会话</dt><dd id="session-id" class="inline-code">—</dd><dt>会话代次</dt><dd id="session-epoch">—</dd><dt>运行实例</dt><dd id="runtime-id" class="inline-code">—</dd></dl>
+    </section>
+    <section aria-labelledby="memory-heading">
+      <div class="section-head"><h2 id="memory-heading">允许使用的记忆</h2><span id="memory-status" class="pill">—</span></div>
+      <div id="memory-value" class="value">—</div>
+      <dl><dt>记忆编号</dt><dd id="memory-id">—</dd><dt>记忆版本</dt><dd id="memory-version">—</dd><dt>人工锁定</dt><dd id="memory-lock">—</dd><dt>来源</dt><dd id="memory-sources">—</dd></dl>
+      <p class="explain">遗忘后，原始聊天档案可保留供本人回看；模型回答、摘要和自动整理须遵守当前有效状态。</p>
+    </section>
+  </div>
+
+  <section aria-labelledby="budget-heading">
+    <div class="section-head"><h2 id="budget-heading">预算与用量</h2><span id="usage-kind" class="pill">—</span></div>
+    <div class="mini"><div><span>已记录用量</span><strong id="budget-used">—</strong></div><div><span>产品剩余预算</span><strong id="budget-remaining">—</strong></div><div><span>请求预留</span><strong id="budget-reserved">—</strong></div></div>
+    <dl><dt>总预算</dt><dd id="budget-limit">—</dd><dt>聊天保留量</dt><dd id="budget-chat">—</dd><dt>服务商余额</dt><dd id="provider-balance">未知；本原型未读取服务商账户余额。</dd><dt>上下文容量</dt><dd id="context-capacity">未知；与产品预算分别核对。</dd></dl>
+    <p class="budget-note muted" id="budget-note">页面数字不是计费证据。是否发起新请求，要同时查看请求记录与门禁结果。</p>
+    <details><summary>查看用量账目</summary><pre id="budget-entries">[]</pre></details>
+  </section>
+
+  <section aria-labelledby="actions-heading">
+    <div class="section-head"><h2 id="actions-heading">自由操作</h2><button id="refresh" type="button">刷新当前状态</button></div>
+    <div class="actions">
+      <div class="action-group">
+        <label for="persona">修改当前角色的人格</label><textarea id="persona">你是大肥鱼，温和、简洁，以自然的语气陪伴虚构使用者，不编造共同经历。</textarea>
+        <div class="buttons"><button type="button" data-action="persona">保存人格</button></div>
+        <p class="explain">修改当前角色，角色身份与关系记忆继续保留。</p>
+      </div>
+      <div class="action-group">
+        <label for="memory-input">记忆内容（仅虚构样本）</label><input id="memory-input" value="虚构样本：喜欢茉莉花茶">
+        <label for="correction-input" style="margin-top:9px">人工纠正后的内容</label><input id="correction-input" value="虚构样本：喜欢乌龙茶">
+        <div class="buttons"><button type="button" data-action="form">形成记忆</button><button type="button" data-action="correct">人工纠正</button><button type="button" data-action="forget">遗忘这条记忆</button></div>
+      </div>
+      <div class="action-group">
+        <label for="chat-input">下一轮交流</label><input id="chat-input" value="你现在记得我的饮品偏好吗？">
+        <div class="buttons"><button type="button" class="primary" data-action="chat">发送给这条鱼</button><button type="button" data-action="background">尝试后台活动</button><button type="button" data-action="fail-request">演练失败请求</button></div>
+      </div>
+      <div class="action-group">
+        <div class="fields"><div><label for="limit-input">总预算（Token）</label><input type="number" min="0" step="1" id="limit-input" value="3000"></div><div><label for="reserve-input">聊天保留量</label><input type="number" min="0" step="1" id="reserve-input" value="300"></div></div>
+        <div class="buttons"><button type="button" data-action="budget">保存预算</button></div>
+        <p class="explain">观察后台先被限制、聊天额度保留，以及总预算耗尽后请求是否停止。</p>
+      </div>
+    </div>
+    <div class="buttons" style="border-top:1px solid var(--line);padding-top:16px;margin-top:20px">
+      <button type="button" data-action="compact">压缩当前上下文</button><button type="button" data-action="new-session">开启新会话</button><button type="button" data-action="restart">重启运行实例</button><button type="button" data-action="recall">尝试读取旧来源</button><button type="button" data-action="consolidate">尝试自动整理</button><button type="button" data-action="stale-job">提交旧版本整理结果</button><button type="button" data-action="unsafe-replay">查看未过滤的旧来源反例</button><button type="button" data-action="reset">重置虚构实验</button>
+    </div>
+    <p class="explain">自由操作允许任意顺序尝试。被阻止或失败也是结果；重启的实际范围以返回记录为准。</p>
+    <p id="operation" role="status" aria-live="polite">等待操作。</p>
+  </section>
+
+  <section aria-labelledby="guide-heading">
+    <h2 id="guide-heading">按场景演练</h2>
+    <div class="tabs" role="tablist" aria-label="演练场景"><button role="tab" type="button" aria-selected="true" data-tab="lifecycle">记忆生命周期</button><button role="tab" type="button" aria-selected="false" data-tab="budget">预算边界</button><button role="tab" type="button" aria-selected="false" data-tab="old-source">旧来源反例</button></div>
+    <div class="walkthrough" role="tabpanel"><h3 id="guide-title"></h3><p class="muted" id="guide-description"></p><div class="buttons"><button type="button" id="start-guide" class="primary">重置样本并开始此演练</button></div><p class="explain" id="guide-progress">选择开始后，按顺序点击每一步；自由操作仍可使用。</p><ol class="steps" id="guide-steps"></ol></div>
+  </section>
+
+  <section aria-labelledby="result-heading"><h2 id="result-heading">最近一次处理结果</h2><div id="last-result" class="result">尚无结果。</div></section>
+  <section aria-labelledby="requests-heading"><div class="section-head"><h2 id="requests-heading">实际请求与上下文</h2><span id="requests-count" class="pill">0 条</span></div><p class="explain" id="requests-explain">展开核对人格、有效记忆、工具、状态版本与用量。仅连接后端时，这里才是后端记录。</p><div id="requests" class="requests"></div></section>
+  <div class="grid" style="margin-top:18px">
+    <section aria-labelledby="archive-heading"><h2 id="archive-heading">本人可回看的聊天档案</h2><p class="explain">档案存在不代表模型可以继续使用。原型不宣称清除了 QQ 或其他外部副本。</p><div id="archive" class="entries"></div></section>
+    <section aria-labelledby="audit-heading"><h2 id="audit-heading">状态变更与拦截记录</h2><div id="audit" class="entries"></div></section>
+  </div>
+  <section><details style="margin:0"><summary>完整相关状态（用于核对）</summary><pre id="full-state">{}</pre></details></section>
+  <footer>此页是实验入口，不是正式管理后台。真实 QQ、B站发现与主动分享不在本轮验收范围；真实模型行为和自然程度须另行验证。</footer>
+</main>
+
+<script>
+/* PROTOTYPE ONLY. Pure, in-memory illustrative state model for file:// sharing.
+   It does not implement DSH or claim to validate persistence. HTTP mode never uses it. */
+const OfflineModel = (() => {
+  const initial = () => ({
+    fish:{id:'prototype-fish',name:'大肥鱼 · 虚构样本',persona:'你是大肥鱼，温和、简洁，以自然的语气陪伴虚构使用者，不编造共同经历。',revision:1},
+    revision:1,memory:{id:'drink-preference',value:'',status:'empty',version:0,locked:false,sourceIds:[]},
+    budget:{limit:3000,used:0,reserved:0,chatReserve:300,entries:[]},sessionId:'offline-session-1',sessionEpoch:1,
+    requests:[],audit:[],archive:[],lastResult:'纯内存演示已就绪。这里没有运行 DSH，也没有写入持久存储。',
+    mode:'mock',runtime:{pid:null,bootId:'offline-1',packages:[],offline:true}
+  });
+  function reduce(previous,action) {
+    if(action.type==='reset') return initial();
+    const s=JSON.parse(JSON.stringify(previous));
+    const stamp=s.revision+1;
+    const record=(text)=>{s.lastResult=text;s.audit.push({revision:stamp,action:action.type,message:text,simulated:true});};
+    const newSession=()=>{s.sessionEpoch++;s.sessionId='offline-session-'+s.sessionEpoch;};
+    const request=(purpose,content,fail=false)=>{
+      const reservation=200,background=purpose!=='chat';
+      if(s.budget.used+s.budget.reserved+reservation>s.budget.limit || (background && s.budget.limit-s.budget.used-s.budget.reserved-reservation<s.budget.chatReserve)) {
+        record('离线演示：预算门禁阻止了 '+purpose+'，没有新增模拟请求。');return;
+      }
+      const usage=fail?null:100;
+      const r={id:'offline-request-'+(s.requests.length+1),purpose,simulated:true,sessionId:s.sessionId,stateRevision:stamp,persona:s.fish.persona,effectiveMemory:s.memory.status==='active'?s.memory.value:null,input:content,usage:{totalTokens:usage,source:fail?'unknown':'known-simulated-usage'},status:fail?'failed':'completed'};
+      s.requests.push(r);if(fail)s.budget.reserved+=reservation;else s.budget.used+=usage;s.budget.entries.push({requestId:r.id,purpose,tokens:usage,reserved:fail?reservation:0,simulated:true});
+      record(fail?'离线演示：模拟请求失败且用量未知；保留请求预留，不能当成零消耗。':'离线演示：已记录 '+purpose+' 请求。允许使用的记忆：'+(r.effectiveMemory||'无')+'。这不是模型回复证据。');
+    };
+    switch(action.type) {
+      case 'persona':s.fish.persona=String(action.value||'');s.fish.revision++;record('离线演示：人格已更新，角色身份保持不变。');break;
+      case 'form': {
+        if(s.memory.status==='forgotten'||s.memory.locked){record('离线演示：已有遗忘标记或人工锁定，自动形成记忆被阻止。');break;}
+        const id='source-'+(s.archive.length+1);s.archive.push({id,text:String(action.value||'虚构样本：喜欢茉莉花茶'),simulated:true});
+        s.memory={...s.memory,value:String(action.value||'虚构样本：喜欢茉莉花茶'),status:'active',version:s.memory.version+1,sourceIds:[id]};record('离线演示：样本记忆已形成。');break;
+      }
+      case 'correct':
+        if(s.memory.status!=='active'){record('离线演示：没有有效记忆可纠正。');break;}
+        s.archive.push({id:'correction-'+stamp,text:String(action.value||'虚构样本：喜欢乌龙茶'),simulated:true});
+        s.memory={...s.memory,value:String(action.value||'虚构样本：喜欢乌龙茶'),version:s.memory.version+1,locked:true};newSession();record('离线演示：人工纠正已锁定，旧版本不能恢复；模拟切换到干净会话。');break;
+      case 'forget':s.memory={...s.memory,value:'',status:'forgotten',version:s.memory.version+1,locked:true};newSession();record('离线演示：有效记忆已撤销，档案保留；模拟切换到干净会话。');break;
+      case 'chat':request('chat',String(action.message||'你现在记得我的饮品偏好吗？'));break;
+      case 'background':request('background','虚构后台活动');break;
+      case 'fail-request':request('chat','虚构失败请求',true);break;
+      case 'compact':request('compaction','只按当前允许使用的记忆生成摘要');break;
+      case 'new-session':newSession();record('离线演示：新会话只读取当前有效记忆。');break;
+      case 'restart':s.runtime.bootId='offline-restart-'+stamp;record('离线演示：仅在同一页内存中模拟恢复；没有进程重启、磁盘恢复或 DSH 验证。');break;
+      case 'recall':record('离线演示：受控来源读取返回 '+(s.memory.status==='active'?s.memory.value:'无允许使用的内容')+'。');break;
+      case 'consolidate':record(s.memory.locked?'离线演示：自动整理被人工锁定或遗忘标记阻止。':'离线演示：没有新的来源变更。');break;
+      case 'stale-job':record('离线演示：旧版本整理结果被拒绝，当前记忆未改变。');break;
+      case 'unsafe-replay':record({warning:'离线反例：未经有效性过滤的档案仍可含旧值。这不是安全召回结果，也没有送给模型。',rawArchive:s.archive});break;
+      case 'budget': {
+        const limit=Number(action.limit),chatReserve=Number(action.chatReserve);
+        if(!Number.isFinite(limit)||!Number.isFinite(chatReserve)||limit<0||chatReserve<0) throw Error('预算和聊天保留量必须是非负数字。');
+        s.budget.limit=limit;s.budget.chatReserve=chatReserve;record('离线演示：预算已修改，下一次模拟请求使用新门禁。');break;
+      }
+      default:throw Error('未知操作：'+action.type);
+    }
+    s.revision=stamp;return s;
+  }
+  return {initial,reduce};
+})();
+</script>
+<script>
+/* Thin throwaway UI. The server is authoritative whenever the page uses HTTP. */
+(() => {
+  const offline=location.protocol==='file:';
+  let state=offline?OfflineModel.initial():null,busy=false,selected='lifecycle',guideStarted=false,guideStep=0;
+  const guideFailures=new Set();
+  const dirtyInputs=new Set();
+  const compactionSample='以下仅为虚构的压缩样本，不是真实共同经历：'+('虚构散步片段：我们沿河经过一座小桥，看见树影落在水面，继续慢慢向前走。'.repeat(30));
+  const $=(id)=>document.getElementById(id);
+  const text=(id,value)=>{$(id).textContent=value===null||value===undefined?'—':String(value);};
+  const stringify=(value)=>typeof value==='string'?value:JSON.stringify(value,null,2);
+  const format=(value)=>typeof value==='number'?value.toLocaleString('zh-CN'):(value??'未知');
+  const scenarios={
+    lifecycle:{title:'先记住，再纠正，最后遗忘',description:'观察每次变更之后的实际请求。为实际触发压缩，演练会发送一段重复 30 次的虚构散步样本。旧值与遗忘内容不应从历史、摘要或重启恢复中回到模型输入。',steps:[
+      ['形成样本记忆',{type:'form',value:'虚构样本：喜欢茉莉花茶'}],['交流，检查输入',{type:'chat',message:'你现在记得我的饮品偏好吗？'}],['人工纠正为乌龙茶',{type:'correct',value:'虚构样本：喜欢乌龙茶'}],['再次交流，检查新值',{type:'chat',message:'我现在喜欢喝什么？'}],['加入虚构长文本供压缩',{type:'chat',message:compactionSample}],['压缩当前上下文',{type:'compact'}],['遗忘饮品偏好',{type:'forget'}],['遗忘后继续交流',{type:'chat',message:'你还记得我的饮品偏好吗？'}],['开启新会话',{type:'new-session'}],['重启运行实例',{type:'restart'}],['尝试读取旧来源',{type:'recall'}],['尝试自动整理',{type:'consolidate'}]
+    ]},
+    budget:{title:'预算限制是否到达请求入口',description:'先降低总预算并保留聊天额度。观察后台请求、普通交流和失败调用的账目；最后将预算置零，核对请求记录不再增加。这里的示例额度不是推荐的产品默认值。',steps:[
+      ['设置小额预算',{type:'budget',limit:1200,chatReserve:1100}],['尝试后台活动',{type:'background'}],['尝试普通交流',{type:'chat',message:'今天就聊一句。'}],['演练失败请求',{type:'fail-request'}],['加入虚构长文本供压缩',{type:'chat',message:compactionSample}],['预算调整为零',{type:'budget',limit:0,chatReserve:0}],['尝试聊天：应被拦截',{type:'chat',message:'预算耗尽后还会请求吗？'}],['尝试压缩，核对拦截记录',{type:'compact'},{allowFailure:true}],['尝试后台：应被拦截',{type:'background'}]
+    ]},
+    'old-source':{title:'旧档案仍在，为什么不能重新记住',description:'保留原文与禁止使用是两个不同状态。演练使用重复 30 次的虚构散步样本生成摘要，再查看未经业务过滤的旧来源、尝试受控读取和旧版本整理。',steps:[
+      ['形成样本记忆',{type:'form',value:'虚构样本：喜欢茉莉花茶'}],['交流，留下历史',{type:'chat',message:'请记住这个虚构偏好。'}],['加入虚构长文本供压缩',{type:'chat',message:compactionSample}],['压缩，形成派生来源',{type:'compact'}],['人工纠正',{type:'correct',value:'虚构样本：喜欢乌龙茶'}],['遗忘这条记忆',{type:'forget'}],['查看未过滤来源反例',{type:'unsafe-replay'}],['通过受控工具读取',{type:'recall'}],['提交旧版本整理结果',{type:'stale-job'}],['检查下一轮输入',{type:'chat',message:'你现在能使用哪些记忆？'}]
+    ]}
+  };
+  const actionNames={reset:'重置虚构实验',persona:'保存人格',form:'形成记忆',correct:'人工纠正',forget:'遗忘',chat:'交流',compact:'压缩上下文','new-session':'开启新会话',recall:'读取旧来源',consolidate:'自动整理',budget:'保存预算',background:'后台活动','fail-request':'失败请求','stale-job':'旧版本整理','unsafe-replay':'未过滤来源反例',restart:'重启运行实例'};
+
+  function displayList(id,items,empty) {
+    const target=$(id);target.replaceChildren();
+    if(!Array.isArray(items)||!items.length){const p=document.createElement('p');p.className='empty';p.textContent=empty;target.append(p);return;}
+    [...items].reverse().forEach(item=>{const div=document.createElement('div');div.className='entry';div.textContent=stringify(item);target.append(div);});
+  }
+  function render() {
+    if(!state)return;
+    const fish=state.fish||{},memory=state.memory||{},budget=state.budget||{},runtime=state.runtime||{};
+    for(const [id,value] of [['persona',fish.persona],['limit-input',budget.limit],['reserve-input',budget.chatReserve]]) {
+      if(value!==undefined&&!dirtyInputs.has(id)&&document.activeElement!==$(id))$(id).value=String(value);
+    }
+    if(offline){text('mode-title','纯内存演示 · 未运行 DSH');text('mode-detail','双击文件模式：操作只保存在当前页，刷新即丢失。不能证明真实 DSH 接入、模型行为、持久化或重启通过。');}
+    else {text('mode-title',state.mode==='real'?'已连接后端 · 真实模型模式':'已连接后端 · DSH + 本地模拟模型');text('mode-detail',state.mode==='real'?'实际模型请求仍须结合下方记录逐项核对；自然程度需要试聊判断。':'宿主接入与模型行为分开判定。模拟用量用于验证预算控制，不是服务商计费证据。');}
+    text('state-revision','状态版本 '+(state.revision??'未知'));text('fish-name',fish.name||'大肥鱼');text('fish-id',fish.id);text('fish-persona',fish.persona);text('session-id',state.sessionId);text('session-epoch',state.sessionEpoch);text('runtime-id',(runtime.bootId||'未知')+(runtime.pid?' · PID '+runtime.pid:''));
+    text('memory-status',({empty:'尚未形成',active:'允许使用',forgotten:'已遗忘'})[memory.status]||memory.status||'未知');text('memory-value',memory.status==='active'?(memory.value||'（空内容）'):memory.status==='forgotten'?'不再用于回答、回忆与整理':'尚无有效记忆');text('memory-id',memory.id);text('memory-version',memory.version);text('memory-lock',memory.locked?'已锁定，自动整理不能覆盖':'未锁定');text('memory-sources',Array.isArray(memory.sourceIds)&&memory.sourceIds.length?memory.sourceIds.join('、'):'无');
+    text('budget-used',format(budget.used));text('budget-limit',format(budget.limit));text('budget-reserved',format(budget.reserved));text('budget-remaining',typeof budget.limit==='number'&&typeof budget.used==='number'?format(Math.max(0,budget.limit-budget.used-(budget.reserved||0))):'未知');text('budget-chat',format(budget.chatReserve));text('usage-kind',offline?'离线模拟账目':state.mode==='real'?'实际请求账目':'已知模拟用量');text('budget-entries',stringify(budget.entries||[]));
+    const capacity=runtime.contextWindow??state.contextWindow??state.contextCapacity;
+    text('context-capacity',capacity?format(capacity)+'（模型窗口，非可支出预算）':'未知；与产品预算分别核对。');
+    text('provider-balance',runtime.providerBalance==null?'未知；本原型未读取服务商账户余额。':stringify(runtime.providerBalance));
+    text('last-result',state.lastResult===undefined?'尚无处理结果。':stringify(state.lastResult));text('full-state',stringify(state));
+    displayList('archive',state.archive,'尚无样本档案。');displayList('audit',state.audit,'尚无变更或拦截记录。');
+    const requests=Array.isArray(state.requests)?state.requests:[];text('requests-count',requests.length+' 条');text('requests-explain',offline?'以下仅为离线模型生成的示意输入；不是 DSH 或服务商请求。':'以下展示后端记录的完整请求对象。请核对实际送入模型的内容，不能只看页面中的当前记忆。');
+    $('requests').replaceChildren();
+    if(!requests.length){const p=document.createElement('p');p.className='empty';p.textContent='尚无请求记录。被预算拦截的操作应在变更记录中出现，且不增加实际请求。';$('requests').append(p);}
+    [...requests].reverse().forEach((request,index)=>{const details=document.createElement('details');const summary=document.createElement('summary');const purpose=({chat:'聊天',background:'后台活动',compaction:'摘要压缩',recall:'受控回忆',consolidate:'自动整理'})[request.purpose]??request.purpose??request.type??'未标用途';const reached=offline?'离线示意':request.reachedProvider===true?'已到达模型适配器':request.reachedProvider===false?'未到达模型适配器':'展开核对';summary.textContent='请求 '+(requests.length-index)+' · '+purpose+' · '+reached+(request.status?' · '+request.status:'');const pre=document.createElement('pre');pre.textContent=stringify(request);details.append(summary,pre);$('requests').append(details);});
+    console.log('[大肥鱼原型] 当前完整状态',JSON.parse(JSON.stringify(state)));
+  }
+  async function getState() {
+    if(offline){render();return;}
+    const response=await fetch('/api/state',{cache:'no-store'});const data=await response.json();if(!response.ok)throw Error(data.error||'无法读取后端状态');state=data.state||data;render();
+  }
+  function setBusy(value) {busy=value;document.querySelectorAll('button').forEach(button=>{button.disabled=value;});}
+  async function dispatch(action) {
+    if(busy)return false;
+    setBusy(true);$('operation').className='';text('operation','正在'+(actionNames[action.type]||action.type)+'…');
+    try {
+      if(offline)state=OfflineModel.reduce(state,action);
+      else {const response=await fetch('/api/action',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(action)});const data=await response.json();if(!response.ok||data.error)throw Error(data.error||'操作未完成');state=data.state||data;}
+      if(action.type==='reset')dirtyInputs.clear();
+      if(action.type==='persona')dirtyInputs.delete('persona');
+      if(action.type==='budget'){dirtyInputs.delete('limit-input');dirtyInputs.delete('reserve-input');}
+      render();text('operation',(offline?'离线演示已处理：':'后端已返回：')+(actionNames[action.type]||action.type)+'。请核对处理结果和请求记录。');return true;
+    } catch(error) {
+      $('operation').className='error';text('operation','操作未完成：'+error.message);
+      if(!offline){try{await getState();}catch{ /* Keep the last observed state, visibly marked as an error. */ }}
+      text('last-result','此次操作失败：'+error.message+'。下方状态保留后端最后一次可读取的记录。');
+      return false;
+    } finally {setBusy(false);}
+  }
+  function readAction(type) {
+    if(type==='persona')return {type,value:$('persona').value};
+    if(type==='form')return {type,value:$('memory-input').value};
+    if(type==='correct')return {type,value:$('correction-input').value};
+    if(type==='chat')return {type,message:$('chat-input').value};
+    if(type==='budget')return {type,limit:Number($('limit-input').value),chatReserve:Number($('reserve-input').value)};
+    return {type};
+  }
+  function renderGuide() {
+    const scenario=scenarios[selected];text('guide-title',scenario.title);text('guide-description',scenario.description);
+    document.querySelectorAll('[data-tab]').forEach(tab=>tab.setAttribute('aria-selected',String(tab.dataset.tab===selected)));
+    text('guide-progress',guideStarted?(guideStep>=scenario.steps.length?'场景操作已走完。请逐项检查证据，操作完成不等于验收通过。':'已执行 '+guideStep+' / '+scenario.steps.length+' 步；点击标记的下一步。'):'先重置样本并开始。每一步都会实际执行对应操作。');
+    $('guide-steps').replaceChildren();
+    scenario.steps.forEach(([label,action,options],index)=>{const li=document.createElement('li'),button=document.createElement('button'),number=document.createElement('span'),name=document.createElement('span');button.type='button';number.className='step-number';number.textContent='第 '+(index+1)+' 步'+(guideStarted&&index<guideStep?(guideFailures.has(index)?' · 已尝试，返回错误':' · 已执行'):'');name.textContent=label;button.append(number,name);button.className=guideStarted&&index===guideStep?'next':guideStarted&&index<guideStep?'done':'';button.addEventListener('click',async()=>{if(!guideStarted){text('operation','请先点击“重置样本并开始此演练”。');return;}if(index!==guideStep){text('operation','请按顺序执行第 '+(guideStep+1)+' 步；也可使用上方自由操作。');return;}const handled=await dispatch(action);if(handled||options?.allowFailure){if(!handled)guideFailures.add(index);guideStep++;renderGuide();}});li.append(button);$('guide-steps').append(li);});
+  }
+  for(const id of ['persona','limit-input','reserve-input'])$(id).addEventListener('input',()=>dirtyInputs.add(id));
+  document.querySelectorAll('[data-action]').forEach(button=>button.addEventListener('click',()=>dispatch(readAction(button.dataset.action))));
+  document.querySelectorAll('[data-tab]').forEach(button=>button.addEventListener('click',()=>{selected=button.dataset.tab;guideStarted=false;guideStep=0;guideFailures.clear();renderGuide();}));
+  $('start-guide').addEventListener('click',async()=>{if(await dispatch({type:'reset'})){guideStarted=true;guideStep=0;guideFailures.clear();renderGuide();}});
+  $('refresh').addEventListener('click',async()=>{try{await getState();$('operation').className='';text('operation','已读取当前状态。');}catch(error){$('operation').className='error';text('operation','读取失败：'+error.message);}});
+  renderGuide();getState().catch(error=>{text('mode-title','未连接到原型后端');text('mode-detail','没有切换成模拟成功。请通过原型启动命令打开此页；双击文件可单独体验纯内存演示。');$('operation').className='error';text('operation','读取失败：'+error.message);});
+})();
+</script>
+</body>
+</html>

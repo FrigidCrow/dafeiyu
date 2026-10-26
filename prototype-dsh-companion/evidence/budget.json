@@ -1,0 +1,4091 @@
+{
+  "recordedAt": "2026-10-26T12:33:05.732Z",
+  "knownMockUsage": {
+    "input": 80,
+    "output": 20,
+    "reservePerAttempt": 200
+  },
+  "checks": {
+    "at600": true,
+    "backgroundPreservesChat": true,
+    "chatStillAdmitted": true,
+    "failedRequestReachedProvider": true,
+    "missingUsageRetainsReservation": true,
+    "manualRetryBlocked": true,
+    "compactionBlocked": true,
+    "restartRetainsUnknownReservation": true,
+    "allAtLimitRequestsDenied": true,
+    "noProviderBudgetOverrun": true
+  },
+  "trace": [
+    {
+      "action": {
+        "type": "reset"
+      },
+      "status": 200,
+      "used": 0,
+      "reserved": 0,
+      "limit": 3000,
+      "requests": 0,
+      "last": "重置虚构样本与模拟账本；旧 DSH 日志仍保存在 scratch 中。",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:04.955Z",
+          "kind": "reset",
+          "detail": "重置虚构样本与模拟账本；旧 DSH 日志仍保存在 scratch 中。"
+        }
+      ],
+      "pid": 39905
+    },
+    {
+      "action": {
+        "type": "budget",
+        "limit": 1000,
+        "chatReserve": 300
+      },
+      "status": 200,
+      "used": 0,
+      "reserved": 0,
+      "limit": 1000,
+      "requests": 0,
+      "last": "预算已更新；每个实际请求都在模型入口检查。",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:04.955Z",
+          "kind": "reset",
+          "detail": "重置虚构样本与模拟账本；旧 DSH 日志仍保存在 scratch 中。"
+        },
+        {
+          "at": "2026-10-26T12:33:04.976Z",
+          "kind": "budget",
+          "detail": "预算已更新；每个实际请求都在模型入口检查。"
+        }
+      ],
+      "pid": 39905
+    },
+    {
+      "action": {
+        "type": "chat",
+        "message": "虚构预算材料第0段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+      },
+      "status": 200,
+      "used": 100,
+      "reserved": 0,
+      "limit": 1000,
+      "requests": 1,
+      "last": "模拟模型收到的有效记忆：无。",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:04.955Z",
+          "kind": "reset",
+          "detail": "重置虚构样本与模拟账本；旧 DSH 日志仍保存在 scratch 中。"
+        },
+        {
+          "at": "2026-10-26T12:33:04.976Z",
+          "kind": "budget",
+          "detail": "预算已更新；每个实际请求都在模型入口检查。"
+        },
+        {
+          "at": "2026-10-26T12:33:05.023Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 1,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "system/message",
+              "user/message",
+              "request/header",
+              "request/context",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        }
+      ],
+      "pid": 39905
+    },
+    {
+      "action": {
+        "type": "chat",
+        "message": "虚构预算材料第1段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+      },
+      "status": 200,
+      "used": 200,
+      "reserved": 0,
+      "limit": 1000,
+      "requests": 2,
+      "last": "模拟模型收到的有效记忆：无。",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:04.976Z",
+          "kind": "budget",
+          "detail": "预算已更新；每个实际请求都在模型入口检查。"
+        },
+        {
+          "at": "2026-10-26T12:33:05.023Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 1,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "system/message",
+              "user/message",
+              "request/header",
+              "request/context",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.072Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 2,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        }
+      ],
+      "pid": 39905
+    },
+    {
+      "action": {
+        "type": "chat",
+        "message": "虚构预算材料第2段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+      },
+      "status": 200,
+      "used": 300,
+      "reserved": 0,
+      "limit": 1000,
+      "requests": 3,
+      "last": "模拟模型收到的有效记忆：无。",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:05.023Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 1,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "system/message",
+              "user/message",
+              "request/header",
+              "request/context",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.072Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 2,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.119Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 3,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        }
+      ],
+      "pid": 39905
+    },
+    {
+      "action": {
+        "type": "chat",
+        "message": "虚构预算材料第3段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+      },
+      "status": 200,
+      "used": 400,
+      "reserved": 0,
+      "limit": 1000,
+      "requests": 4,
+      "last": "模拟模型收到的有效记忆：无。",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:05.072Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 2,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.119Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 3,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.165Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 4,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        }
+      ],
+      "pid": 39905
+    },
+    {
+      "action": {
+        "type": "chat",
+        "message": "虚构预算材料第4段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+      },
+      "status": 200,
+      "used": 500,
+      "reserved": 0,
+      "limit": 1000,
+      "requests": 5,
+      "last": "模拟模型收到的有效记忆：无。",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:05.119Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 3,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.165Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 4,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.215Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 5,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        }
+      ],
+      "pid": 39905
+    },
+    {
+      "action": {
+        "type": "chat",
+        "message": "虚构预算材料第5段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+      },
+      "status": 200,
+      "used": 600,
+      "reserved": 0,
+      "limit": 1000,
+      "requests": 6,
+      "last": "模拟模型收到的有效记忆：无。",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:05.165Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 4,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.215Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 5,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.271Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 6,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        }
+      ],
+      "pid": 39905
+    },
+    {
+      "action": {
+        "type": "background"
+      },
+      "status": 200,
+      "used": 600,
+      "reserved": 0,
+      "limit": 1000,
+      "requests": 6,
+      "last": "DSH 已结束本轮：{\"kind\":\"error\",\"error\":{\"message\":\"产品预算不足：请求在到达 provider 前已停止\",\"code\":\"PROTOTYPE_BUDGET_LIMIT\"}}",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:05.271Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 6,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.291Z",
+          "kind": "budget-denied",
+          "detail": {
+            "purpose": "background",
+            "remaining": 400,
+            "needed": 500
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.304Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "background",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": null,
+            "end": {
+              "turn": 7,
+              "reason": {
+                "kind": "error",
+                "error": {
+                  "message": "产品预算不足：请求在到达 provider 前已停止",
+                  "code": "PROTOTYPE_BUDGET_LIMIT"
+                }
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/attempt",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        }
+      ],
+      "pid": 39905
+    },
+    {
+      "action": {
+        "type": "chat"
+      },
+      "status": 200,
+      "used": 700,
+      "reserved": 0,
+      "limit": 1000,
+      "requests": 7,
+      "last": "模拟模型收到的有效记忆：无。",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:05.291Z",
+          "kind": "budget-denied",
+          "detail": {
+            "purpose": "background",
+            "remaining": 400,
+            "needed": 500
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.304Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "background",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": null,
+            "end": {
+              "turn": 7,
+              "reason": {
+                "kind": "error",
+                "error": {
+                  "message": "产品预算不足：请求在到达 provider 前已停止",
+                  "code": "PROTOTYPE_BUDGET_LIMIT"
+                }
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/attempt",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.353Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 8,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        }
+      ],
+      "pid": 39905
+    },
+    {
+      "action": {
+        "type": "fail-request"
+      },
+      "status": 200,
+      "used": 700,
+      "reserved": 200,
+      "limit": 1000,
+      "requests": 8,
+      "last": "DSH 已结束本轮：{\"kind\":\"error\",\"error\":{\"message\":\"模拟连接中断：没有返回 usage\",\"code\":\"PROTOTYPE_DISCONNECT\"}}",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:05.304Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "background",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": null,
+            "end": {
+              "turn": 7,
+              "reason": {
+                "kind": "error",
+                "error": {
+                  "message": "产品预算不足：请求在到达 provider 前已停止",
+                  "code": "PROTOTYPE_BUDGET_LIMIT"
+                }
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/attempt",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.353Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": "模拟模型收到的有效记忆：无。",
+            "end": {
+              "turn": 8,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/message",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.405Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "failed-request",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": null,
+            "end": {
+              "turn": 9,
+              "reason": {
+                "kind": "error",
+                "error": {
+                  "message": "模拟连接中断：没有返回 usage",
+                  "code": "PROTOTYPE_DISCONNECT"
+                }
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/attempt",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        }
+      ],
+      "pid": 39905
+    },
+    {
+      "action": {
+        "type": "chat"
+      },
+      "status": 200,
+      "used": 700,
+      "reserved": 200,
+      "limit": 1000,
+      "requests": 8,
+      "last": "DSH 已结束本轮：{\"kind\":\"error\",\"error\":{\"message\":\"产品预算不足：请求在到达 provider 前已停止\",\"code\":\"PROTOTYPE_BUDGET_LIMIT\"}}",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:05.405Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "failed-request",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": null,
+            "end": {
+              "turn": 9,
+              "reason": {
+                "kind": "error",
+                "error": {
+                  "message": "模拟连接中断：没有返回 usage",
+                  "code": "PROTOTYPE_DISCONNECT"
+                }
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/attempt",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.426Z",
+          "kind": "budget-denied",
+          "detail": {
+            "purpose": "chat",
+            "remaining": 100,
+            "needed": 200
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.437Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": null,
+            "end": {
+              "turn": 10,
+              "reason": {
+                "kind": "error",
+                "error": {
+                  "message": "产品预算不足：请求在到达 provider 前已停止",
+                  "code": "PROTOTYPE_BUDGET_LIMIT"
+                }
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/attempt",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        }
+      ],
+      "pid": 39905
+    },
+    {
+      "action": {
+        "type": "compact"
+      },
+      "status": 400,
+      "error": "manual compaction could not produce a smaller summary",
+      "used": 700,
+      "reserved": 200,
+      "limit": 1000,
+      "requests": 8,
+      "last": "DSH 已结束本轮：{\"kind\":\"error\",\"error\":{\"message\":\"产品预算不足：请求在到达 provider 前已停止\",\"code\":\"PROTOTYPE_BUDGET_LIMIT\"}}",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:05.426Z",
+          "kind": "budget-denied",
+          "detail": {
+            "purpose": "chat",
+            "remaining": 100,
+            "needed": 200
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.437Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": null,
+            "end": {
+              "turn": 10,
+              "reason": {
+                "kind": "error",
+                "error": {
+                  "message": "产品预算不足：请求在到达 provider 前已停止",
+                  "code": "PROTOTYPE_BUDGET_LIMIT"
+                }
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/attempt",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.461Z",
+          "kind": "budget-denied",
+          "detail": {
+            "purpose": "compaction",
+            "remaining": 100,
+            "needed": 500
+          }
+        }
+      ],
+      "pid": 39905
+    },
+    {
+      "action": {
+        "type": "restart"
+      },
+      "status": 200,
+      "used": 700,
+      "reserved": 200,
+      "limit": 1000,
+      "requests": 8,
+      "last": "真实 DSH 进程已重启，从 scratch 恢复状态。旧 PID 39905 → 新 PID 39951",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:05.437Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": null,
+            "end": {
+              "turn": 10,
+              "reason": {
+                "kind": "error",
+                "error": {
+                  "message": "产品预算不足：请求在到达 provider 前已停止",
+                  "code": "PROTOTYPE_BUDGET_LIMIT"
+                }
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/attempt",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.461Z",
+          "kind": "budget-denied",
+          "detail": {
+            "purpose": "compaction",
+            "remaining": 100,
+            "needed": 500
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.611Z",
+          "kind": "host-started",
+          "detail": {
+            "pid": 39951,
+            "bootId": "cdd46896-3774-48ff-ad4d-d0b3f7aa56af",
+            "resumedSession": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93"
+          }
+        }
+      ],
+      "pid": 39951
+    },
+    {
+      "action": {
+        "type": "budget",
+        "limit": 900,
+        "chatReserve": 0
+      },
+      "status": 200,
+      "used": 700,
+      "reserved": 200,
+      "limit": 900,
+      "requests": 8,
+      "last": "预算已更新；每个实际请求都在模型入口检查。",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:05.461Z",
+          "kind": "budget-denied",
+          "detail": {
+            "purpose": "compaction",
+            "remaining": 100,
+            "needed": 500
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.611Z",
+          "kind": "host-started",
+          "detail": {
+            "pid": 39951,
+            "bootId": "cdd46896-3774-48ff-ad4d-d0b3f7aa56af",
+            "resumedSession": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93"
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.631Z",
+          "kind": "budget",
+          "detail": "预算已更新；每个实际请求都在模型入口检查。"
+        }
+      ],
+      "pid": 39951
+    },
+    {
+      "action": {
+        "type": "chat"
+      },
+      "status": 200,
+      "used": 700,
+      "reserved": 200,
+      "limit": 900,
+      "requests": 8,
+      "last": "DSH 已结束本轮：{\"kind\":\"error\",\"error\":{\"message\":\"产品预算不足：请求在到达 provider 前已停止\",\"code\":\"PROTOTYPE_BUDGET_LIMIT\"}}",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:05.631Z",
+          "kind": "budget",
+          "detail": "预算已更新；每个实际请求都在模型入口检查。"
+        },
+        {
+          "at": "2026-10-26T12:33:05.645Z",
+          "kind": "budget-denied",
+          "detail": {
+            "purpose": "chat",
+            "remaining": 0,
+            "needed": 200
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.659Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": null,
+            "end": {
+              "turn": 11,
+              "reason": {
+                "kind": "error",
+                "error": {
+                  "message": "产品预算不足：请求在到达 provider 前已停止",
+                  "code": "PROTOTYPE_BUDGET_LIMIT"
+                }
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "system/message",
+              "user/message",
+              "request/header",
+              "assistant/attempt",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        }
+      ],
+      "pid": 39951
+    },
+    {
+      "action": {
+        "type": "background"
+      },
+      "status": 200,
+      "used": 700,
+      "reserved": 200,
+      "limit": 900,
+      "requests": 8,
+      "last": "DSH 已结束本轮：{\"kind\":\"error\",\"error\":{\"message\":\"产品预算不足：请求在到达 provider 前已停止\",\"code\":\"PROTOTYPE_BUDGET_LIMIT\"}}",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:05.659Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "chat",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": null,
+            "end": {
+              "turn": 11,
+              "reason": {
+                "kind": "error",
+                "error": {
+                  "message": "产品预算不足：请求在到达 provider 前已停止",
+                  "code": "PROTOTYPE_BUDGET_LIMIT"
+                }
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "system/message",
+              "user/message",
+              "request/header",
+              "assistant/attempt",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.681Z",
+          "kind": "budget-denied",
+          "detail": {
+            "purpose": "background",
+            "remaining": 0,
+            "needed": 200
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.694Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "background",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": null,
+            "end": {
+              "turn": 12,
+              "reason": {
+                "kind": "error",
+                "error": {
+                  "message": "产品预算不足：请求在到达 provider 前已停止",
+                  "code": "PROTOTYPE_BUDGET_LIMIT"
+                }
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/attempt",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        }
+      ],
+      "pid": 39951
+    },
+    {
+      "action": {
+        "type": "compact"
+      },
+      "status": 400,
+      "error": "manual compaction could not produce a smaller summary",
+      "used": 700,
+      "reserved": 200,
+      "limit": 900,
+      "requests": 8,
+      "last": "DSH 已结束本轮：{\"kind\":\"error\",\"error\":{\"message\":\"产品预算不足：请求在到达 provider 前已停止\",\"code\":\"PROTOTYPE_BUDGET_LIMIT\"}}",
+      "audit": [
+        {
+          "at": "2026-10-26T12:33:05.681Z",
+          "kind": "budget-denied",
+          "detail": {
+            "purpose": "background",
+            "remaining": 0,
+            "needed": 200
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.694Z",
+          "kind": "turn-completed",
+          "detail": {
+            "purpose": "background",
+            "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+            "answer": null,
+            "end": {
+              "turn": 12,
+              "reason": {
+                "kind": "error",
+                "error": {
+                  "message": "产品预算不足：请求在到达 provider 前已停止",
+                  "code": "PROTOTYPE_BUDGET_LIMIT"
+                }
+              }
+            },
+            "events": [
+              "agent/inbox/spliced",
+              "turn/start",
+              "agent/inbox/spliced",
+              "step/start",
+              "user/message",
+              "assistant/attempt",
+              "step/end",
+              "turn/end"
+            ]
+          }
+        },
+        {
+          "at": "2026-10-26T12:33:05.717Z",
+          "kind": "budget-denied",
+          "detail": {
+            "purpose": "compaction",
+            "remaining": 0,
+            "needed": 200
+          }
+        }
+      ],
+      "pid": 39951
+    }
+  ],
+  "finalState": {
+    "fish": {
+      "id": "PROTOTYPE-FISH-ONE",
+      "name": "大肥鱼 · 虚构样本",
+      "persona": "温和直接的陪伴伙伴。用简短中文交流，不强制追问。",
+      "revision": 1
+    },
+    "revision": 3,
+    "memory": {
+      "id": "sample-preference",
+      "value": "",
+      "status": "empty",
+      "version": 0,
+      "locked": false,
+      "sourceIds": []
+    },
+    "budget": {
+      "limit": 900,
+      "used": 700,
+      "reserved": 200,
+      "chatReserve": 0,
+      "entries": [
+        {
+          "id": "dbab49cd-8c58-4582-9a13-55b9bb8b1a10",
+          "purpose": "chat",
+          "reserved": 0,
+          "status": "settled",
+          "usage": {
+            "inputTokens": 80,
+            "outputTokens": 20,
+            "totalTokens": 100
+          },
+          "actual": 100
+        },
+        {
+          "id": "2147edc5-df67-4a98-ab8e-439d876630ad",
+          "purpose": "chat",
+          "reserved": 0,
+          "status": "settled",
+          "usage": {
+            "inputTokens": 80,
+            "outputTokens": 20,
+            "totalTokens": 100
+          },
+          "actual": 100
+        },
+        {
+          "id": "4cdc1d7b-cd0e-43f6-9134-86c7a774b71b",
+          "purpose": "chat",
+          "reserved": 0,
+          "status": "settled",
+          "usage": {
+            "inputTokens": 80,
+            "outputTokens": 20,
+            "totalTokens": 100
+          },
+          "actual": 100
+        },
+        {
+          "id": "585efe98-f742-4b44-89ec-e8419ae937dd",
+          "purpose": "chat",
+          "reserved": 0,
+          "status": "settled",
+          "usage": {
+            "inputTokens": 80,
+            "outputTokens": 20,
+            "totalTokens": 100
+          },
+          "actual": 100
+        },
+        {
+          "id": "28a82f4c-a7bb-47c6-81b0-6aa089592e00",
+          "purpose": "chat",
+          "reserved": 0,
+          "status": "settled",
+          "usage": {
+            "inputTokens": 80,
+            "outputTokens": 20,
+            "totalTokens": 100
+          },
+          "actual": 100
+        },
+        {
+          "id": "d80dc165-4ccb-43f7-8341-d9cad7752173",
+          "purpose": "chat",
+          "reserved": 0,
+          "status": "settled",
+          "usage": {
+            "inputTokens": 80,
+            "outputTokens": 20,
+            "totalTokens": 100
+          },
+          "actual": 100
+        },
+        {
+          "id": "8488040c-a728-4085-999e-20f357698de7",
+          "purpose": "chat",
+          "reserved": 0,
+          "status": "settled",
+          "usage": {
+            "inputTokens": 80,
+            "outputTokens": 20,
+            "totalTokens": 100
+          },
+          "actual": 100
+        },
+        {
+          "id": "47e4487a-751d-4096-a4f7-a7d052297d88",
+          "purpose": "failed-request",
+          "reserved": 200,
+          "status": "unknown-usage",
+          "usage": null
+        }
+      ],
+      "remaining": 0
+    },
+    "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+    "sessionEpoch": 0,
+    "appliedEpoch": 0,
+    "archive": [],
+    "revokedSources": [],
+    "requests": [
+      {
+        "id": "dbab49cd-8c58-4582-9a13-55b9bb8b1a10",
+        "at": "2026-10-26T12:33:04.991Z",
+        "purpose": "chat",
+        "fishId": "PROTOTYPE-FISH-ONE",
+        "revision": 2,
+        "sessionEpoch": 0,
+        "memoryVersion": 0,
+        "nativeLoop": true,
+        "reachedProvider": true,
+        "request": {
+          "provider": "prototype",
+          "model": "scripted-fixture",
+          "maxTokens": 256,
+          "messages": [
+            {
+              "role": "system",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "这是一次性原型的虚构相处。核心人格不得自动修改。\n{\"fish_id\":\"PROTOTYPE-FISH-ONE\",\"persona\":\"温和直接的陪伴伙伴。用简短中文交流，不强制追问。\",\"persona_revision\":1,\"state_revision\":2,\"memory_version\":0,\"allowed_memory\":null,\"memory_status\":\"empty\"}\n需要回看来源时只能调用 recall_allowed_source。记住明确事实时调用 remember_sample；人工纠正与遗忘优先。"
+                }
+              ],
+              "source": {
+                "kind": "system-prompt"
+              },
+              "id": "b0fb0fbb-5a01-452b-996a-0cfc69ff3e62"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第0段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "a1984972-79e1-420c-99e3-b9de21f60301"
+            }
+          ],
+          "toolHistory": {
+            "tools": [
+              {
+                "name": "recall_allowed_source",
+                "description": "按当前撤销、版本与人工锁检查旧来源。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              {
+                "name": "remember_sample",
+                "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value"
+                  ]
+                }
+              }
+            ],
+            "updates": []
+          },
+          "tools": [
+            {
+              "name": "recall_allowed_source",
+              "description": "按当前撤销、版本与人工锁检查旧来源。",
+              "parameters": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            {
+              "name": "remember_sample",
+              "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93"
+        }
+      },
+      {
+        "id": "2147edc5-df67-4a98-ab8e-439d876630ad",
+        "at": "2026-10-26T12:33:05.043Z",
+        "purpose": "chat",
+        "fishId": "PROTOTYPE-FISH-ONE",
+        "revision": 2,
+        "sessionEpoch": 0,
+        "memoryVersion": 0,
+        "nativeLoop": true,
+        "reachedProvider": true,
+        "request": {
+          "provider": "prototype",
+          "model": "scripted-fixture",
+          "maxTokens": 256,
+          "messages": [
+            {
+              "role": "system",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "这是一次性原型的虚构相处。核心人格不得自动修改。\n{\"fish_id\":\"PROTOTYPE-FISH-ONE\",\"persona\":\"温和直接的陪伴伙伴。用简短中文交流，不强制追问。\",\"persona_revision\":1,\"state_revision\":2,\"memory_version\":0,\"allowed_memory\":null,\"memory_status\":\"empty\"}\n需要回看来源时只能调用 recall_allowed_source。记住明确事实时调用 remember_sample；人工纠正与遗忘优先。"
+                }
+              ],
+              "source": {
+                "kind": "system-prompt"
+              },
+              "id": "b0fb0fbb-5a01-452b-996a-0cfc69ff3e62"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第0段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "a1984972-79e1-420c-99e3-b9de21f60301"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "88591fd2-0863-4de3-bb86-b19c4c971e01"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第1段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "3a28b0f5-5951-4dfc-9446-01b237d5145e"
+            }
+          ],
+          "toolHistory": {
+            "tools": [
+              {
+                "name": "recall_allowed_source",
+                "description": "按当前撤销、版本与人工锁检查旧来源。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              {
+                "name": "remember_sample",
+                "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value"
+                  ]
+                }
+              }
+            ],
+            "updates": []
+          },
+          "tools": [
+            {
+              "name": "recall_allowed_source",
+              "description": "按当前撤销、版本与人工锁检查旧来源。",
+              "parameters": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            {
+              "name": "remember_sample",
+              "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93"
+        }
+      },
+      {
+        "id": "4cdc1d7b-cd0e-43f6-9134-86c7a774b71b",
+        "at": "2026-10-26T12:33:05.089Z",
+        "purpose": "chat",
+        "fishId": "PROTOTYPE-FISH-ONE",
+        "revision": 2,
+        "sessionEpoch": 0,
+        "memoryVersion": 0,
+        "nativeLoop": true,
+        "reachedProvider": true,
+        "request": {
+          "provider": "prototype",
+          "model": "scripted-fixture",
+          "maxTokens": 256,
+          "messages": [
+            {
+              "role": "system",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "这是一次性原型的虚构相处。核心人格不得自动修改。\n{\"fish_id\":\"PROTOTYPE-FISH-ONE\",\"persona\":\"温和直接的陪伴伙伴。用简短中文交流，不强制追问。\",\"persona_revision\":1,\"state_revision\":2,\"memory_version\":0,\"allowed_memory\":null,\"memory_status\":\"empty\"}\n需要回看来源时只能调用 recall_allowed_source。记住明确事实时调用 remember_sample；人工纠正与遗忘优先。"
+                }
+              ],
+              "source": {
+                "kind": "system-prompt"
+              },
+              "id": "b0fb0fbb-5a01-452b-996a-0cfc69ff3e62"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第0段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "a1984972-79e1-420c-99e3-b9de21f60301"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "88591fd2-0863-4de3-bb86-b19c4c971e01"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第1段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "3a28b0f5-5951-4dfc-9446-01b237d5145e"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "39c367dd-ae82-4eac-a98b-d924f720d62f"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第2段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "10870685-02ea-4919-b9d4-c330b7feb201"
+            }
+          ],
+          "toolHistory": {
+            "tools": [
+              {
+                "name": "recall_allowed_source",
+                "description": "按当前撤销、版本与人工锁检查旧来源。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              {
+                "name": "remember_sample",
+                "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value"
+                  ]
+                }
+              }
+            ],
+            "updates": []
+          },
+          "tools": [
+            {
+              "name": "recall_allowed_source",
+              "description": "按当前撤销、版本与人工锁检查旧来源。",
+              "parameters": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            {
+              "name": "remember_sample",
+              "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93"
+        }
+      },
+      {
+        "id": "585efe98-f742-4b44-89ec-e8419ae937dd",
+        "at": "2026-10-26T12:33:05.138Z",
+        "purpose": "chat",
+        "fishId": "PROTOTYPE-FISH-ONE",
+        "revision": 2,
+        "sessionEpoch": 0,
+        "memoryVersion": 0,
+        "nativeLoop": true,
+        "reachedProvider": true,
+        "request": {
+          "provider": "prototype",
+          "model": "scripted-fixture",
+          "maxTokens": 256,
+          "messages": [
+            {
+              "role": "system",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "这是一次性原型的虚构相处。核心人格不得自动修改。\n{\"fish_id\":\"PROTOTYPE-FISH-ONE\",\"persona\":\"温和直接的陪伴伙伴。用简短中文交流，不强制追问。\",\"persona_revision\":1,\"state_revision\":2,\"memory_version\":0,\"allowed_memory\":null,\"memory_status\":\"empty\"}\n需要回看来源时只能调用 recall_allowed_source。记住明确事实时调用 remember_sample；人工纠正与遗忘优先。"
+                }
+              ],
+              "source": {
+                "kind": "system-prompt"
+              },
+              "id": "b0fb0fbb-5a01-452b-996a-0cfc69ff3e62"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第0段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "a1984972-79e1-420c-99e3-b9de21f60301"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "88591fd2-0863-4de3-bb86-b19c4c971e01"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第1段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "3a28b0f5-5951-4dfc-9446-01b237d5145e"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "39c367dd-ae82-4eac-a98b-d924f720d62f"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第2段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "10870685-02ea-4919-b9d4-c330b7feb201"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "982b7460-599d-4689-a844-484f5a09dc53"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第3段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "c6931eb9-7994-4b33-b7b5-23b43f4da577"
+            }
+          ],
+          "toolHistory": {
+            "tools": [
+              {
+                "name": "recall_allowed_source",
+                "description": "按当前撤销、版本与人工锁检查旧来源。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              {
+                "name": "remember_sample",
+                "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value"
+                  ]
+                }
+              }
+            ],
+            "updates": []
+          },
+          "tools": [
+            {
+              "name": "recall_allowed_source",
+              "description": "按当前撤销、版本与人工锁检查旧来源。",
+              "parameters": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            {
+              "name": "remember_sample",
+              "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93"
+        }
+      },
+      {
+        "id": "28a82f4c-a7bb-47c6-81b0-6aa089592e00",
+        "at": "2026-10-26T12:33:05.184Z",
+        "purpose": "chat",
+        "fishId": "PROTOTYPE-FISH-ONE",
+        "revision": 2,
+        "sessionEpoch": 0,
+        "memoryVersion": 0,
+        "nativeLoop": true,
+        "reachedProvider": true,
+        "request": {
+          "provider": "prototype",
+          "model": "scripted-fixture",
+          "maxTokens": 256,
+          "messages": [
+            {
+              "role": "system",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "这是一次性原型的虚构相处。核心人格不得自动修改。\n{\"fish_id\":\"PROTOTYPE-FISH-ONE\",\"persona\":\"温和直接的陪伴伙伴。用简短中文交流，不强制追问。\",\"persona_revision\":1,\"state_revision\":2,\"memory_version\":0,\"allowed_memory\":null,\"memory_status\":\"empty\"}\n需要回看来源时只能调用 recall_allowed_source。记住明确事实时调用 remember_sample；人工纠正与遗忘优先。"
+                }
+              ],
+              "source": {
+                "kind": "system-prompt"
+              },
+              "id": "b0fb0fbb-5a01-452b-996a-0cfc69ff3e62"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第0段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "a1984972-79e1-420c-99e3-b9de21f60301"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "88591fd2-0863-4de3-bb86-b19c4c971e01"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第1段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "3a28b0f5-5951-4dfc-9446-01b237d5145e"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "39c367dd-ae82-4eac-a98b-d924f720d62f"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第2段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "10870685-02ea-4919-b9d4-c330b7feb201"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "982b7460-599d-4689-a844-484f5a09dc53"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第3段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "c6931eb9-7994-4b33-b7b5-23b43f4da577"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "f7a3e70d-913d-47a1-a51f-e872f0d95dcc"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第4段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "5e92c83a-2450-45e4-97ad-89a6333e7417"
+            }
+          ],
+          "toolHistory": {
+            "tools": [
+              {
+                "name": "recall_allowed_source",
+                "description": "按当前撤销、版本与人工锁检查旧来源。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              {
+                "name": "remember_sample",
+                "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value"
+                  ]
+                }
+              }
+            ],
+            "updates": []
+          },
+          "tools": [
+            {
+              "name": "recall_allowed_source",
+              "description": "按当前撤销、版本与人工锁检查旧来源。",
+              "parameters": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            {
+              "name": "remember_sample",
+              "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93"
+        }
+      },
+      {
+        "id": "d80dc165-4ccb-43f7-8341-d9cad7752173",
+        "at": "2026-10-26T12:33:05.239Z",
+        "purpose": "chat",
+        "fishId": "PROTOTYPE-FISH-ONE",
+        "revision": 2,
+        "sessionEpoch": 0,
+        "memoryVersion": 0,
+        "nativeLoop": true,
+        "reachedProvider": true,
+        "request": {
+          "provider": "prototype",
+          "model": "scripted-fixture",
+          "maxTokens": 256,
+          "messages": [
+            {
+              "role": "system",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "这是一次性原型的虚构相处。核心人格不得自动修改。\n{\"fish_id\":\"PROTOTYPE-FISH-ONE\",\"persona\":\"温和直接的陪伴伙伴。用简短中文交流，不强制追问。\",\"persona_revision\":1,\"state_revision\":2,\"memory_version\":0,\"allowed_memory\":null,\"memory_status\":\"empty\"}\n需要回看来源时只能调用 recall_allowed_source。记住明确事实时调用 remember_sample；人工纠正与遗忘优先。"
+                }
+              ],
+              "source": {
+                "kind": "system-prompt"
+              },
+              "id": "b0fb0fbb-5a01-452b-996a-0cfc69ff3e62"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第0段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "a1984972-79e1-420c-99e3-b9de21f60301"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "88591fd2-0863-4de3-bb86-b19c4c971e01"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第1段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "3a28b0f5-5951-4dfc-9446-01b237d5145e"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "39c367dd-ae82-4eac-a98b-d924f720d62f"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第2段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "10870685-02ea-4919-b9d4-c330b7feb201"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "982b7460-599d-4689-a844-484f5a09dc53"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第3段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "c6931eb9-7994-4b33-b7b5-23b43f4da577"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "f7a3e70d-913d-47a1-a51f-e872f0d95dcc"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第4段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "5e92c83a-2450-45e4-97ad-89a6333e7417"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "edd88596-8cda-43cb-9bad-95c2536567b7"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第5段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "ca3fbfe4-2427-40f2-b42a-e935e7bbd723"
+            }
+          ],
+          "toolHistory": {
+            "tools": [
+              {
+                "name": "recall_allowed_source",
+                "description": "按当前撤销、版本与人工锁检查旧来源。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              {
+                "name": "remember_sample",
+                "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value"
+                  ]
+                }
+              }
+            ],
+            "updates": []
+          },
+          "tools": [
+            {
+              "name": "recall_allowed_source",
+              "description": "按当前撤销、版本与人工锁检查旧来源。",
+              "parameters": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            {
+              "name": "remember_sample",
+              "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93"
+        }
+      },
+      {
+        "id": "8488040c-a728-4085-999e-20f357698de7",
+        "at": "2026-10-26T12:33:05.323Z",
+        "purpose": "chat",
+        "fishId": "PROTOTYPE-FISH-ONE",
+        "revision": 2,
+        "sessionEpoch": 0,
+        "memoryVersion": 0,
+        "nativeLoop": true,
+        "reachedProvider": true,
+        "request": {
+          "provider": "prototype",
+          "model": "scripted-fixture",
+          "maxTokens": 256,
+          "messages": [
+            {
+              "role": "system",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "这是一次性原型的虚构相处。核心人格不得自动修改。\n{\"fish_id\":\"PROTOTYPE-FISH-ONE\",\"persona\":\"温和直接的陪伴伙伴。用简短中文交流，不强制追问。\",\"persona_revision\":1,\"state_revision\":2,\"memory_version\":0,\"allowed_memory\":null,\"memory_status\":\"empty\"}\n需要回看来源时只能调用 recall_allowed_source。记住明确事实时调用 remember_sample；人工纠正与遗忘优先。"
+                }
+              ],
+              "source": {
+                "kind": "system-prompt"
+              },
+              "id": "b0fb0fbb-5a01-452b-996a-0cfc69ff3e62"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第0段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "a1984972-79e1-420c-99e3-b9de21f60301"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "88591fd2-0863-4de3-bb86-b19c4c971e01"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第1段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "3a28b0f5-5951-4dfc-9446-01b237d5145e"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "39c367dd-ae82-4eac-a98b-d924f720d62f"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第2段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "10870685-02ea-4919-b9d4-c330b7feb201"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "982b7460-599d-4689-a844-484f5a09dc53"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第3段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "c6931eb9-7994-4b33-b7b5-23b43f4da577"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "f7a3e70d-913d-47a1-a51f-e872f0d95dcc"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第4段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "5e92c83a-2450-45e4-97ad-89a6333e7417"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "edd88596-8cda-43cb-9bad-95c2536567b7"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第5段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "ca3fbfe4-2427-40f2-b42a-e935e7bbd723"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "195b3dd9-14f5-4c90-9746-4b995212c984"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "后台活动：就最近允许使用的内容做一次简短整理。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "e6ba6b00-ad32-4236-91e0-2a90c811ae1f"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "我们刚才聊过什么偏好？"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "223588a7-91a7-4e2a-8421-3d904b966ecf"
+            }
+          ],
+          "toolHistory": {
+            "tools": [
+              {
+                "name": "recall_allowed_source",
+                "description": "按当前撤销、版本与人工锁检查旧来源。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              {
+                "name": "remember_sample",
+                "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value"
+                  ]
+                }
+              }
+            ],
+            "updates": []
+          },
+          "tools": [
+            {
+              "name": "recall_allowed_source",
+              "description": "按当前撤销、版本与人工锁检查旧来源。",
+              "parameters": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            {
+              "name": "remember_sample",
+              "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93"
+        }
+      },
+      {
+        "id": "47e4487a-751d-4096-a4f7-a7d052297d88",
+        "at": "2026-10-26T12:33:05.375Z",
+        "purpose": "failed-request",
+        "fishId": "PROTOTYPE-FISH-ONE",
+        "revision": 2,
+        "sessionEpoch": 0,
+        "memoryVersion": 0,
+        "nativeLoop": true,
+        "reachedProvider": true,
+        "request": {
+          "provider": "prototype",
+          "model": "scripted-fixture",
+          "maxTokens": 256,
+          "messages": [
+            {
+              "role": "system",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "这是一次性原型的虚构相处。核心人格不得自动修改。\n{\"fish_id\":\"PROTOTYPE-FISH-ONE\",\"persona\":\"温和直接的陪伴伙伴。用简短中文交流，不强制追问。\",\"persona_revision\":1,\"state_revision\":2,\"memory_version\":0,\"allowed_memory\":null,\"memory_status\":\"empty\"}\n需要回看来源时只能调用 recall_allowed_source。记住明确事实时调用 remember_sample；人工纠正与遗忘优先。"
+                }
+              ],
+              "source": {
+                "kind": "system-prompt"
+              },
+              "id": "b0fb0fbb-5a01-452b-996a-0cfc69ff3e62"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第0段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "a1984972-79e1-420c-99e3-b9de21f60301"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "88591fd2-0863-4de3-bb86-b19c4c971e01"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第1段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "3a28b0f5-5951-4dfc-9446-01b237d5145e"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "39c367dd-ae82-4eac-a98b-d924f720d62f"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第2段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "10870685-02ea-4919-b9d4-c330b7feb201"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "982b7460-599d-4689-a844-484f5a09dc53"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第3段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "c6931eb9-7994-4b33-b7b5-23b43f4da577"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "f7a3e70d-913d-47a1-a51f-e872f0d95dcc"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第4段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "5e92c83a-2450-45e4-97ad-89a6333e7417"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "edd88596-8cda-43cb-9bad-95c2536567b7"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "虚构预算材料第5段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "ca3fbfe4-2427-40f2-b42a-e935e7bbd723"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "195b3dd9-14f5-4c90-9746-4b995212c984"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "后台活动：就最近允许使用的内容做一次简短整理。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "e6ba6b00-ad32-4236-91e0-2a90c811ae1f"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "我们刚才聊过什么偏好？"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "223588a7-91a7-4e2a-8421-3d904b966ecf"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟模型收到的有效记忆：无。"
+                }
+              ],
+              "source": {
+                "kind": "model",
+                "provider": "prototype",
+                "model": "scripted-fixture"
+              },
+              "id": "131c294c-9054-4362-b09f-bc7d1b3a2ac3"
+            },
+            {
+              "content": [
+                {
+                  "type": "text",
+                  "text": "模拟一次缺失 usage 的请求中断。"
+                }
+              ],
+              "source": {
+                "kind": "user"
+              },
+              "role": "user",
+              "id": "d5a16e61-ca22-414f-8d54-be0a4dd38aef"
+            }
+          ],
+          "toolHistory": {
+            "tools": [
+              {
+                "name": "recall_allowed_source",
+                "description": "按当前撤销、版本与人工锁检查旧来源。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              {
+                "name": "remember_sample",
+                "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+                "parameters": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value"
+                  ]
+                }
+              }
+            ],
+            "updates": []
+          },
+          "tools": [
+            {
+              "name": "recall_allowed_source",
+              "description": "按当前撤销、版本与人工锁检查旧来源。",
+              "parameters": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            {
+              "name": "remember_sample",
+              "description": "记录虚构样本的明确偏好；人工纠正或遗忘后不得自动覆盖。",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93"
+        }
+      }
+    ],
+    "audit": [
+      {
+        "at": "2026-10-26T12:33:04.955Z",
+        "kind": "reset",
+        "detail": "重置虚构样本与模拟账本；旧 DSH 日志仍保存在 scratch 中。"
+      },
+      {
+        "at": "2026-10-26T12:33:04.976Z",
+        "kind": "budget",
+        "detail": "预算已更新；每个实际请求都在模型入口检查。"
+      },
+      {
+        "at": "2026-10-26T12:33:05.023Z",
+        "kind": "turn-completed",
+        "detail": {
+          "purpose": "chat",
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+          "answer": "模拟模型收到的有效记忆：无。",
+          "end": {
+            "turn": 1,
+            "reason": {
+              "kind": "completed"
+            }
+          },
+          "events": [
+            "agent/inbox/spliced",
+            "turn/start",
+            "agent/inbox/spliced",
+            "step/start",
+            "system/message",
+            "user/message",
+            "request/header",
+            "request/context",
+            "assistant/message",
+            "step/end",
+            "turn/end"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.072Z",
+        "kind": "turn-completed",
+        "detail": {
+          "purpose": "chat",
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+          "answer": "模拟模型收到的有效记忆：无。",
+          "end": {
+            "turn": 2,
+            "reason": {
+              "kind": "completed"
+            }
+          },
+          "events": [
+            "agent/inbox/spliced",
+            "turn/start",
+            "agent/inbox/spliced",
+            "step/start",
+            "user/message",
+            "assistant/message",
+            "step/end",
+            "turn/end"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.119Z",
+        "kind": "turn-completed",
+        "detail": {
+          "purpose": "chat",
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+          "answer": "模拟模型收到的有效记忆：无。",
+          "end": {
+            "turn": 3,
+            "reason": {
+              "kind": "completed"
+            }
+          },
+          "events": [
+            "agent/inbox/spliced",
+            "turn/start",
+            "agent/inbox/spliced",
+            "step/start",
+            "user/message",
+            "assistant/message",
+            "step/end",
+            "turn/end"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.165Z",
+        "kind": "turn-completed",
+        "detail": {
+          "purpose": "chat",
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+          "answer": "模拟模型收到的有效记忆：无。",
+          "end": {
+            "turn": 4,
+            "reason": {
+              "kind": "completed"
+            }
+          },
+          "events": [
+            "agent/inbox/spliced",
+            "turn/start",
+            "agent/inbox/spliced",
+            "step/start",
+            "user/message",
+            "assistant/message",
+            "step/end",
+            "turn/end"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.215Z",
+        "kind": "turn-completed",
+        "detail": {
+          "purpose": "chat",
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+          "answer": "模拟模型收到的有效记忆：无。",
+          "end": {
+            "turn": 5,
+            "reason": {
+              "kind": "completed"
+            }
+          },
+          "events": [
+            "agent/inbox/spliced",
+            "turn/start",
+            "agent/inbox/spliced",
+            "step/start",
+            "user/message",
+            "assistant/message",
+            "step/end",
+            "turn/end"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.271Z",
+        "kind": "turn-completed",
+        "detail": {
+          "purpose": "chat",
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+          "answer": "模拟模型收到的有效记忆：无。",
+          "end": {
+            "turn": 6,
+            "reason": {
+              "kind": "completed"
+            }
+          },
+          "events": [
+            "agent/inbox/spliced",
+            "turn/start",
+            "agent/inbox/spliced",
+            "step/start",
+            "user/message",
+            "assistant/message",
+            "step/end",
+            "turn/end"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.291Z",
+        "kind": "budget-denied",
+        "detail": {
+          "purpose": "background",
+          "remaining": 400,
+          "needed": 500
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.304Z",
+        "kind": "turn-completed",
+        "detail": {
+          "purpose": "background",
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+          "answer": null,
+          "end": {
+            "turn": 7,
+            "reason": {
+              "kind": "error",
+              "error": {
+                "message": "产品预算不足：请求在到达 provider 前已停止",
+                "code": "PROTOTYPE_BUDGET_LIMIT"
+              }
+            }
+          },
+          "events": [
+            "agent/inbox/spliced",
+            "turn/start",
+            "agent/inbox/spliced",
+            "step/start",
+            "user/message",
+            "assistant/attempt",
+            "step/end",
+            "turn/end"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.353Z",
+        "kind": "turn-completed",
+        "detail": {
+          "purpose": "chat",
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+          "answer": "模拟模型收到的有效记忆：无。",
+          "end": {
+            "turn": 8,
+            "reason": {
+              "kind": "completed"
+            }
+          },
+          "events": [
+            "agent/inbox/spliced",
+            "turn/start",
+            "agent/inbox/spliced",
+            "step/start",
+            "user/message",
+            "assistant/message",
+            "step/end",
+            "turn/end"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.405Z",
+        "kind": "turn-completed",
+        "detail": {
+          "purpose": "failed-request",
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+          "answer": null,
+          "end": {
+            "turn": 9,
+            "reason": {
+              "kind": "error",
+              "error": {
+                "message": "模拟连接中断：没有返回 usage",
+                "code": "PROTOTYPE_DISCONNECT"
+              }
+            }
+          },
+          "events": [
+            "agent/inbox/spliced",
+            "turn/start",
+            "agent/inbox/spliced",
+            "step/start",
+            "user/message",
+            "assistant/attempt",
+            "step/end",
+            "turn/end"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.426Z",
+        "kind": "budget-denied",
+        "detail": {
+          "purpose": "chat",
+          "remaining": 100,
+          "needed": 200
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.437Z",
+        "kind": "turn-completed",
+        "detail": {
+          "purpose": "chat",
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+          "answer": null,
+          "end": {
+            "turn": 10,
+            "reason": {
+              "kind": "error",
+              "error": {
+                "message": "产品预算不足：请求在到达 provider 前已停止",
+                "code": "PROTOTYPE_BUDGET_LIMIT"
+              }
+            }
+          },
+          "events": [
+            "agent/inbox/spliced",
+            "turn/start",
+            "agent/inbox/spliced",
+            "step/start",
+            "user/message",
+            "assistant/attempt",
+            "step/end",
+            "turn/end"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.461Z",
+        "kind": "budget-denied",
+        "detail": {
+          "purpose": "compaction",
+          "remaining": 100,
+          "needed": 500
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.611Z",
+        "kind": "host-started",
+        "detail": {
+          "pid": 39951,
+          "bootId": "cdd46896-3774-48ff-ad4d-d0b3f7aa56af",
+          "resumedSession": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93"
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.631Z",
+        "kind": "budget",
+        "detail": "预算已更新；每个实际请求都在模型入口检查。"
+      },
+      {
+        "at": "2026-10-26T12:33:05.645Z",
+        "kind": "budget-denied",
+        "detail": {
+          "purpose": "chat",
+          "remaining": 0,
+          "needed": 200
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.659Z",
+        "kind": "turn-completed",
+        "detail": {
+          "purpose": "chat",
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+          "answer": null,
+          "end": {
+            "turn": 11,
+            "reason": {
+              "kind": "error",
+              "error": {
+                "message": "产品预算不足：请求在到达 provider 前已停止",
+                "code": "PROTOTYPE_BUDGET_LIMIT"
+              }
+            }
+          },
+          "events": [
+            "agent/inbox/spliced",
+            "turn/start",
+            "agent/inbox/spliced",
+            "step/start",
+            "system/message",
+            "user/message",
+            "request/header",
+            "assistant/attempt",
+            "step/end",
+            "turn/end"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.681Z",
+        "kind": "budget-denied",
+        "detail": {
+          "purpose": "background",
+          "remaining": 0,
+          "needed": 200
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.694Z",
+        "kind": "turn-completed",
+        "detail": {
+          "purpose": "background",
+          "sessionId": "prototype-68df2345-ce61-4811-a62f-c40d0ba7cb93",
+          "answer": null,
+          "end": {
+            "turn": 12,
+            "reason": {
+              "kind": "error",
+              "error": {
+                "message": "产品预算不足：请求在到达 provider 前已停止",
+                "code": "PROTOTYPE_BUDGET_LIMIT"
+              }
+            }
+          },
+          "events": [
+            "agent/inbox/spliced",
+            "turn/start",
+            "agent/inbox/spliced",
+            "step/start",
+            "user/message",
+            "assistant/attempt",
+            "step/end",
+            "turn/end"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-26T12:33:05.717Z",
+        "kind": "budget-denied",
+        "detail": {
+          "purpose": "compaction",
+          "remaining": 0,
+          "needed": 200
+        }
+      }
+    ],
+    "lastResult": "DSH 已结束本轮：{\"kind\":\"error\",\"error\":{\"message\":\"产品预算不足：请求在到达 provider 前已停止\",\"code\":\"PROTOTYPE_BUDGET_LIMIT\"}}",
+    "mode": "mock",
+    "runtime": {
+      "pid": 39951,
+      "bootId": "cdd46896-3774-48ff-ad4d-d0b3f7aa56af",
+      "dshVersion": "0.2.1-rc.3 (npm release)",
+      "cordisVersion": "4.0.5",
+      "scratchRoot": "/Users/frigidcrow/.codex/worktrees/prototype-dsh-companion/dafeiyu/prototype-dsh-companion/PROTOTYPE_SCRATCH_budget_wipe_me",
+      "provider": "本地确定性模拟，无网络请求",
+      "contextWindow": 8192,
+      "providerBalance": null,
+      "sessionEvents": [
+        {
+          "seq": 0,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 1,
+          "type": "turn/start"
+        },
+        {
+          "seq": 2,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 3,
+          "type": "step/start"
+        },
+        {
+          "seq": 4,
+          "type": "system/message"
+        },
+        {
+          "seq": 5,
+          "type": "user/message"
+        },
+        {
+          "seq": 6,
+          "type": "request/header"
+        },
+        {
+          "seq": 7,
+          "type": "request/context"
+        },
+        {
+          "seq": 8,
+          "type": "assistant/message"
+        },
+        {
+          "seq": 9,
+          "type": "step/end"
+        },
+        {
+          "seq": 10,
+          "type": "turn/end"
+        },
+        {
+          "seq": 11,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 12,
+          "type": "turn/start"
+        },
+        {
+          "seq": 13,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 14,
+          "type": "step/start"
+        },
+        {
+          "seq": 15,
+          "type": "user/message"
+        },
+        {
+          "seq": 16,
+          "type": "assistant/message"
+        },
+        {
+          "seq": 17,
+          "type": "step/end"
+        },
+        {
+          "seq": 18,
+          "type": "turn/end"
+        },
+        {
+          "seq": 19,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 20,
+          "type": "turn/start"
+        },
+        {
+          "seq": 21,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 22,
+          "type": "step/start"
+        },
+        {
+          "seq": 23,
+          "type": "user/message"
+        },
+        {
+          "seq": 24,
+          "type": "assistant/message"
+        },
+        {
+          "seq": 25,
+          "type": "step/end"
+        },
+        {
+          "seq": 26,
+          "type": "turn/end"
+        },
+        {
+          "seq": 27,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 28,
+          "type": "turn/start"
+        },
+        {
+          "seq": 29,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 30,
+          "type": "step/start"
+        },
+        {
+          "seq": 31,
+          "type": "user/message"
+        },
+        {
+          "seq": 32,
+          "type": "assistant/message"
+        },
+        {
+          "seq": 33,
+          "type": "step/end"
+        },
+        {
+          "seq": 34,
+          "type": "turn/end"
+        },
+        {
+          "seq": 35,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 36,
+          "type": "turn/start"
+        },
+        {
+          "seq": 37,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 38,
+          "type": "step/start"
+        },
+        {
+          "seq": 39,
+          "type": "user/message"
+        },
+        {
+          "seq": 40,
+          "type": "assistant/message"
+        },
+        {
+          "seq": 41,
+          "type": "step/end"
+        },
+        {
+          "seq": 42,
+          "type": "turn/end"
+        },
+        {
+          "seq": 43,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 44,
+          "type": "turn/start"
+        },
+        {
+          "seq": 45,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 46,
+          "type": "step/start"
+        },
+        {
+          "seq": 47,
+          "type": "user/message"
+        },
+        {
+          "seq": 48,
+          "type": "assistant/message"
+        },
+        {
+          "seq": 49,
+          "type": "step/end"
+        },
+        {
+          "seq": 50,
+          "type": "turn/end"
+        },
+        {
+          "seq": 51,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 52,
+          "type": "turn/start"
+        },
+        {
+          "seq": 53,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 54,
+          "type": "step/start"
+        },
+        {
+          "seq": 55,
+          "type": "user/message"
+        },
+        {
+          "seq": 56,
+          "type": "assistant/attempt"
+        },
+        {
+          "seq": 57,
+          "type": "step/end"
+        },
+        {
+          "seq": 58,
+          "type": "turn/end"
+        },
+        {
+          "seq": 59,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 60,
+          "type": "turn/start"
+        },
+        {
+          "seq": 61,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 62,
+          "type": "step/start"
+        },
+        {
+          "seq": 63,
+          "type": "user/message"
+        },
+        {
+          "seq": 64,
+          "type": "assistant/message"
+        },
+        {
+          "seq": 65,
+          "type": "step/end"
+        },
+        {
+          "seq": 66,
+          "type": "turn/end"
+        },
+        {
+          "seq": 67,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 68,
+          "type": "turn/start"
+        },
+        {
+          "seq": 69,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 70,
+          "type": "step/start"
+        },
+        {
+          "seq": 71,
+          "type": "user/message"
+        },
+        {
+          "seq": 72,
+          "type": "assistant/attempt"
+        },
+        {
+          "seq": 73,
+          "type": "step/end"
+        },
+        {
+          "seq": 74,
+          "type": "turn/end"
+        },
+        {
+          "seq": 75,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 76,
+          "type": "turn/start"
+        },
+        {
+          "seq": 77,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 78,
+          "type": "step/start"
+        },
+        {
+          "seq": 79,
+          "type": "user/message"
+        },
+        {
+          "seq": 80,
+          "type": "assistant/attempt"
+        },
+        {
+          "seq": 81,
+          "type": "step/end"
+        },
+        {
+          "seq": 82,
+          "type": "turn/end"
+        },
+        {
+          "seq": 83,
+          "type": "compaction/start"
+        },
+        {
+          "seq": 84,
+          "type": "compaction/end"
+        },
+        {
+          "seq": 85,
+          "type": "session/end-seed"
+        },
+        {
+          "seq": 86,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 87,
+          "type": "turn/start"
+        },
+        {
+          "seq": 88,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 89,
+          "type": "step/start"
+        },
+        {
+          "seq": 90,
+          "type": "system/message"
+        },
+        {
+          "seq": 91,
+          "type": "user/message"
+        },
+        {
+          "seq": 92,
+          "type": "request/header"
+        },
+        {
+          "seq": 93,
+          "type": "assistant/attempt"
+        },
+        {
+          "seq": 94,
+          "type": "step/end"
+        },
+        {
+          "seq": 95,
+          "type": "turn/end"
+        },
+        {
+          "seq": 96,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 97,
+          "type": "turn/start"
+        },
+        {
+          "seq": 98,
+          "type": "agent/inbox/spliced"
+        },
+        {
+          "seq": 99,
+          "type": "step/start"
+        },
+        {
+          "seq": 100,
+          "type": "user/message"
+        },
+        {
+          "seq": 101,
+          "type": "assistant/attempt"
+        },
+        {
+          "seq": 102,
+          "type": "step/end"
+        },
+        {
+          "seq": 103,
+          "type": "turn/end"
+        },
+        {
+          "seq": 104,
+          "type": "compaction/start"
+        },
+        {
+          "seq": 105,
+          "type": "compaction/end"
+        }
+      ],
+      "surface": [
+        {
+          "role": "system",
+          "content": [
+            {
+              "type": "text",
+              "text": "这是一次性原型的虚构相处。核心人格不得自动修改。\n{\"fish_id\":\"PROTOTYPE-FISH-ONE\",\"persona\":\"温和直接的陪伴伙伴。用简短中文交流，不强制追问。\",\"persona_revision\":1,\"state_revision\":3,\"memory_version\":0,\"allowed_memory\":null,\"memory_status\":\"empty\"}\n需要回看来源时只能调用 recall_allowed_source。记住明确事实时调用 remember_sample；人工纠正与遗忘优先。"
+            }
+          ],
+          "source": {
+            "kind": "system-prompt"
+          },
+          "id": "1f889a6f-2d02-4057-b549-7bffe5613f7e"
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "虚构预算材料第0段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          },
+          "role": "user",
+          "id": "a1984972-79e1-420c-99e3-b9de21f60301"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "模拟模型收到的有效记忆：无。"
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "prototype",
+            "model": "scripted-fixture"
+          },
+          "id": "88591fd2-0863-4de3-bb86-b19c4c971e01"
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "虚构预算材料第1段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          },
+          "role": "user",
+          "id": "3a28b0f5-5951-4dfc-9446-01b237d5145e"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "模拟模型收到的有效记忆：无。"
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "prototype",
+            "model": "scripted-fixture"
+          },
+          "id": "39c367dd-ae82-4eac-a98b-d924f720d62f"
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "虚构预算材料第2段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          },
+          "role": "user",
+          "id": "10870685-02ea-4919-b9d4-c330b7feb201"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "模拟模型收到的有效记忆：无。"
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "prototype",
+            "model": "scripted-fixture"
+          },
+          "id": "982b7460-599d-4689-a844-484f5a09dc53"
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "虚构预算材料第3段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          },
+          "role": "user",
+          "id": "c6931eb9-7994-4b33-b7b5-23b43f4da577"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "模拟模型收到的有效记忆：无。"
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "prototype",
+            "model": "scripted-fixture"
+          },
+          "id": "f7a3e70d-913d-47a1-a51f-e872f0d95dcc"
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "虚构预算材料第4段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          },
+          "role": "user",
+          "id": "5e92c83a-2450-45e4-97ad-89a6333e7417"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "模拟模型收到的有效记忆：无。"
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "prototype",
+            "model": "scripted-fixture"
+          },
+          "id": "edd88596-8cda-43cb-9bad-95c2536567b7"
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "虚构预算材料第5段：我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。我们讨论了窗外的树木、河流、天气与散步路线。"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          },
+          "role": "user",
+          "id": "ca3fbfe4-2427-40f2-b42a-e935e7bbd723"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "模拟模型收到的有效记忆：无。"
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "prototype",
+            "model": "scripted-fixture"
+          },
+          "id": "195b3dd9-14f5-4c90-9746-4b995212c984"
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "后台活动：就最近允许使用的内容做一次简短整理。"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          },
+          "role": "user",
+          "id": "e6ba6b00-ad32-4236-91e0-2a90c811ae1f"
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "我们刚才聊过什么偏好？"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          },
+          "role": "user",
+          "id": "223588a7-91a7-4e2a-8421-3d904b966ecf"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "text",
+              "text": "模拟模型收到的有效记忆：无。"
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "prototype",
+            "model": "scripted-fixture"
+          },
+          "id": "131c294c-9054-4362-b09f-bc7d1b3a2ac3"
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "模拟一次缺失 usage 的请求中断。"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          },
+          "role": "user",
+          "id": "d5a16e61-ca22-414f-8d54-be0a4dd38aef"
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "我们刚才聊过什么偏好？"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          },
+          "role": "user",
+          "id": "7ce3469f-c235-486f-882f-109948616a67"
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "我们刚才聊过什么偏好？"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          },
+          "role": "user",
+          "id": "809d1ef9-e319-4bf7-bc8d-bf424205e8a2"
+        },
+        {
+          "content": [
+            {
+              "type": "text",
+              "text": "后台活动：就最近允许使用的内容做一次简短整理。"
+            }
+          ],
+          "source": {
+            "kind": "user"
+          },
+          "role": "user",
+          "id": "960491e0-f305-464d-bc98-d36125c81954"
+        }
+      ]
+    }
+  }
+}

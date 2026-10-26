@@ -1,0 +1,8 @@
+{
+  "status": "reproduced-and-removed",
+  "action": "Append a system/message replacement while DSH agent is idle, then flush, dispose and resume",
+  "observed": "In-memory append accepted; persistent log reload rejected",
+  "error": "SessionPersistenceCorruptionError: stored log is corrupt: SessionFormatError: system/message does not match an open turn and step",
+  "retainedRawLog": "idle-system-edit-session.v4.jsonl",
+  "resolution": "Never append system/message out of turn. Retire the DSH session on correction/forget; replace only the summarization call input via the supported BasicCompactionEngine.summarize hook."
+}

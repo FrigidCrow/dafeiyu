@@ -1,0 +1,27 @@
+{
+  "recordedAt": "2026-10-26T12:36:09.973Z",
+  "finalPage": "http://127.0.0.1:4317",
+  "finalReadOnlyCheck": {
+    "revision": 6,
+    "memoryVersion": 3,
+    "memoryStatus": "forgotten",
+    "pid": 39807,
+    "requests": 20,
+    "used": 2000
+  },
+  "screenshot": "ui-final.jpg",
+  "offline": {
+    "logic": "form -> correct -> forget executed in Node; versions 1 -> 2 -> 3, same fish ID, cleared value, retained 2 archive items",
+    "externalDependencies": false,
+    "doubleClickBrowserAcceptance": "not run; browser tool disallows file URLs"
+  },
+  "earlierBrowserWalkthroughs": {
+    "instance": 4318,
+    "isolatedScratch": true,
+    "lifecycleSteps": 12,
+    "budgetSteps": 9,
+    "oldSourceSteps": 10,
+    "status": "completed on preceding backend iteration; final backend verified by lifecycle.json/budget.json/stale-job.json",
+    "consoleErrors": 0
+  }
+}

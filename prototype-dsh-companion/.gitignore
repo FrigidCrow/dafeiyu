@@ -1,0 +1,4 @@
+node_modules/
+PROTOTYPE_SCRATCH*/
+.env*
+*.log
